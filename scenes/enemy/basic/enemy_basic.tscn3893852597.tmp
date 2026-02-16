@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://b2hhnols2lwf4"]
+
+[ext_resource type="Script" uid="uid://cu3ouaiugla4o" path="res://scenes/enemy/enemy.gd" id="1_u3r74"]
+[ext_resource type="Script" uid="uid://hkj6sqf13wrt" path="res://scripts/hitbox.gd" id="2_bll0m"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bll0m"]
+radius = 23.021729
+
+[node name="Enemy" type="PathFollow2D" unique_id=648356743 node_paths=PackedStringArray("hp_bar", "animation_player", "hitbox")]
+rotates = false
+loop = false
+script = ExtResource("1_u3r74")
+hp_bar = NodePath("ProgressBar")
+animation_player = NodePath("AnimationPlayer")
+hitbox = NodePath("Hitbox")
+metadata/_custom_type_script = "uid://cu3ouaiugla4o"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2056488554]
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=637925146]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.421288
+offset_top = 31.0
+offset_right = 103.575905
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.37340426, 0.37340426)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 70.0
+show_percentage = false
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=868248733 groups=["enemy"]]
+script = ExtResource("2_bll0m")
+metadata/_custom_type_script = "uid://hkj6sqf13wrt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1262851641]
+shape = SubResource("CircleShape2D_bll0m")
+debug_color = Color(0.96928734, 0, 0.4654646, 0.41960785)

@@ -11,8 +11,28 @@ config_version=5
 [application]
 
 config/name="BrGJ2026"
+run/main_scene="uid://dqb83i6x4q4tf"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/window_width_override=1920
+window/size/window_height_override=1080
+window/stretch/mode="canvas_items"
+
+[global_group]
+
+enemy=""
+defender=""
+
+[layer_names]
+
+2d_physics/layer_1="protector"
+2d_physics/layer_2="protector_area"
+2d_physics/layer_3="enemy"
+2d_physics/layer_4="enemy_area"
+2d_physics/layer_5="attack"
 
 [physics]
 

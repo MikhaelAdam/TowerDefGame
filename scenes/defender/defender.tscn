@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://de1w5yxqdsdoq"]
+
+[ext_resource type="Script" uid="uid://fbl4gw0rubi0" path="res://scenes/defender/defender.gd" id="1_rtfvy"]
+
+[node name="Defender" type="Area2D" unique_id=2053704257]
+script = ExtResource("1_rtfvy")

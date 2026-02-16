@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://88g8ccg12gvn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvi1f"]
+size = Vector2(46, 618)
+
+[node name="Harvester" type="Area2D" unique_id=29287158]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1889377012]
+shape = SubResource("RectangleShape2D_tvi1f")
