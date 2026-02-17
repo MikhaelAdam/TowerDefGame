@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://88g8ccg12gvn"]
 
+[ext_resource type="Script" uid="uid://3q0er4mn2nwp" path="res://scenes/harvester/harvester.gd" id="1_2536x"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tvi1f"]
 size = Vector2(46, 618)
 
 [node name="Harvester" type="Area2D" unique_id=29287158]
+script = ExtResource("1_2536x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1889377012]
 shape = SubResource("RectangleShape2D_tvi1f")

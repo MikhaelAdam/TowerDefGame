@@ -1,4 +1,4 @@
-extends Node
+extends Area2D
 class_name EnemyScan
 
 signal see_another(coll_body: Area2D)
