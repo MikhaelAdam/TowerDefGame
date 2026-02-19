@@ -2,9 +2,15 @@
 
 [ext_resource type="Script" uid="uid://cu3ouaiugla4o" path="res://scenes/enemy/enemy.gd" id="1_u3r74"]
 [ext_resource type="Script" uid="uid://7r0bndag78gj" path="res://scripts/hurtbox.gd" id="2_bll0m"]
+[ext_resource type="Script" uid="uid://cen84trulduae" path="res://scripts/enemyscan.gd" id="3_8m4vw"]
+[ext_resource type="Script" uid="uid://dxtdgl2qwcrv0" path="res://scripts/states/statemachine.gd" id="4_sejl8"]
+[ext_resource type="Script" uid="uid://30qt8siamhtd" path="res://scripts/states/enemy/travel.gd" id="5_jp1u3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bll0m"]
 radius = 23.021729
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sejl8"]
+radius = 17.117243
 
 [node name="EnemyBasic" type="PathFollow2D" unique_id=648356743 node_paths=PackedStringArray("hp_bar", "animation_player") groups=["enemy"]]
 rotates = false
@@ -35,6 +41,9 @@ value = 100.0
 show_percentage = false
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=579529254 node_paths=PackedStringArray("enemy")]
+collision_layer = 4
+collision_mask = 2
+monitorable = false
 script = ExtResource("2_bll0m")
 enemy = NodePath("..")
 metadata/_custom_type_script = "uid://7r0bndag78gj"
@@ -42,3 +51,19 @@ metadata/_custom_type_script = "uid://7r0bndag78gj"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1997106138]
 shape = SubResource("CircleShape2D_bll0m")
 debug_color = Color(0.96928734, 0, 0.4654646, 0.41960785)
+
+[node name="EnemyScan" type="Area2D" parent="." unique_id=1489816325]
+script = ExtResource("3_8m4vw")
+metadata/_custom_type_script = "uid://cen84trulduae"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyScan" unique_id=1562307296]
+shape = SubResource("CircleShape2D_sejl8")
+
+[node name="StateMachine" type="Node" parent="." unique_id=67872752]
+script = ExtResource("4_sejl8")
+metadata/_custom_type_script = "uid://dxtdgl2qwcrv0"
+
+[node name="Travel" type="Node" parent="StateMachine" unique_id=1528699881]
+script = ExtResource("5_jp1u3")
+
+[node name="Node" type="Node" parent="StateMachine" unique_id=72922005]
