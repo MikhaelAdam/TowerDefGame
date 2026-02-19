@@ -2,16 +2,16 @@ extends Node2D
 
 @export var enemy_basic: PackedScene
 
-# Called when the node enters the scene tree for the first time.
+# Display Collision
 func _ready() -> void:
-	pass # Replace with function body.
+	get_tree().debug_collisions_hint = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
+# Spawner
 func _on_timer_timeout() -> void:
 	var enemy := enemy_basic.instantiate()
 	var enemy2 := enemy_basic.instantiate()

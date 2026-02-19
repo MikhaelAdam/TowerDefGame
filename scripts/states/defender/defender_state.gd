@@ -8,7 +8,6 @@ const FALLING = "Falling"
 
 var defender: Defender
 
-
 func _ready() -> void:
 	await owner.ready
 	defender = owner as Defender
