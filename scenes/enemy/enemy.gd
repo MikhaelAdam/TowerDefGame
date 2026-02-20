@@ -13,6 +13,6 @@ func take_damage(amount: int) -> void:
 	if hp_bar.value == 0:
 		die.emit()
 	hp_bar.visible = true 
-	
+
 func destroy() -> void:
 	queue_free()
