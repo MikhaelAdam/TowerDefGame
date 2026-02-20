@@ -3,17 +3,11 @@
 [ext_resource type="Script" uid="uid://c06arbrgdxf6w" path="res://scenes/UI/Menu/main_menu.gd" id="1_y7a7g"]
 [ext_resource type="Texture2D" uid="uid://dix0trqyvxi50" path="res://assets/main menu/bg.png" id="2_fmbgv"]
 [ext_resource type="Texture2D" uid="uid://bofvp6wbiintg" path="res://assets/main menu/play_hover.svg" id="2_m8roa"]
+[ext_resource type="Texture2D" uid="uid://du15oexxb4dx4" path="res://assets/main menu/play_normal.png" id="3_afbwa"]
 [ext_resource type="Texture2D" uid="uid://ghxh03lkpt5v" path="res://assets/main menu/option_hover.svg" id="3_q6htt"]
 [ext_resource type="Texture2D" uid="uid://gj05ififnafd" path="res://assets/main menu/exit_hover.svg" id="4_fmbgv"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5adca"]
-load_path = "res://.godot/imported/play_normal.png-4f3882815a1e172dab2daa7e04e2b522.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y7a7g"]
-load_path = "res://.godot/imported/option_normal.png-3bde150cc50c79984a6513575cd903d7.ctex"
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m8roa"]
-load_path = "res://.godot/imported/exit_normal.png-e0147d643c93b6ea05a40f8f4d4a4fb3.ctex"
+[ext_resource type="Texture2D" uid="uid://dq8q4yt4qtvs3" path="res://assets/main menu/option_normal.png" id="5_ih7ev"]
+[ext_resource type="Texture2D" uid="uid://c1f0kyqtwpram" path="res://assets/main menu/exit_normal.png" id="7_f0uag"]
 
 [node name="MainMenu" type="Control" unique_id=1053707141]
 layout_mode = 3
@@ -58,7 +52,7 @@ size_flags_vertical = 8
 [node name="Play" type="TextureButton" parent="ButtonPosition/HBoxContainer/VBoxContainer" unique_id=319688740]
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
-texture_normal = SubResource("CompressedTexture2D_5adca")
+texture_normal = ExtResource("3_afbwa")
 texture_hover = ExtResource("2_m8roa")
 ignore_texture_size = true
 stretch_mode = 4
@@ -66,7 +60,7 @@ stretch_mode = 4
 [node name="Option" type="TextureButton" parent="ButtonPosition/HBoxContainer/VBoxContainer" unique_id=1668259449]
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
-texture_normal = SubResource("CompressedTexture2D_y7a7g")
+texture_normal = ExtResource("5_ih7ev")
 texture_hover = ExtResource("3_q6htt")
 ignore_texture_size = true
 stretch_mode = 4
@@ -74,7 +68,7 @@ stretch_mode = 4
 [node name="Exit" type="TextureButton" parent="ButtonPosition/HBoxContainer/VBoxContainer" unique_id=1869465388]
 custom_minimum_size = Vector2(230, 80)
 layout_mode = 2
-texture_normal = SubResource("CompressedTexture2D_m8roa")
+texture_normal = ExtResource("7_f0uag")
 texture_hover = ExtResource("4_fmbgv")
 ignore_texture_size = true
 stretch_mode = 4

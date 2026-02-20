@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://n2w6ikyx504h"]
+
+[ext_resource type="Texture2D" uid="uid://c5fr00dxs23sa" path="res://assets/image/mc/head.png" id="1_56tic"]
+[ext_resource type="Texture2D" uid="uid://vw7fqk2wtrq8" path="res://assets/image/mc/hair.png" id="2_vgubb"]
+[ext_resource type="Texture2D" uid="uid://d0wngsd4eoiv6" path="res://assets/image/mc/leg1.png" id="3_s0ygt"]
+[ext_resource type="Texture2D" uid="uid://c7r1awm8w0wp3" path="res://assets/image/mc/leg2.png" id="4_mcwte"]
+[ext_resource type="Texture2D" uid="uid://c3xsng2whnnq1" path="res://assets/image/mc/feet.png" id="5_3dweh"]
+[ext_resource type="Texture2D" uid="uid://bi4k5l761jdx1" path="res://assets/image/mc/torso.png" id="6_8d0my"]
+[ext_resource type="Texture2D" uid="uid://blde7ifmf07yu" path="res://assets/image/mc/hand.png" id="7_8d0my"]
+[ext_resource type="Texture2D" uid="uid://brudwldat133m" path="res://assets/image/mc/arm.png" id="8_r7mhc"]
+[ext_resource type="Texture2D" uid="uid://djqol45qenbup" path="res://assets/image/mc/hands.png" id="9_eoff5"]
+[ext_resource type="Texture2D" uid="uid://cm7xiiyt21o2j" path="res://assets/image/mc/pistol.png" id="10_r7mhc"]
+
+[node name="MC" type="Node2D" unique_id=1496343394]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=63060719]
+
+[node name="Head" type="Sprite2D" parent="CanvasGroup" unique_id=2116981797]
+position = Vector2(-2, 24)
+texture = ExtResource("1_56tic")
+
+[node name="Hair" type="Sprite2D" parent="CanvasGroup/Head" unique_id=1942493643]
+position = Vector2(-16, -159)
+texture = ExtResource("2_vgubb")
+
+[node name="Leg1" type="Sprite2D" parent="CanvasGroup" unique_id=2035750849]
+position = Vector2(-64.315, 377)
+texture = ExtResource("3_s0ygt")
+offset = Vector2(0, 131)
+
+[node name="Leg2" type="Sprite2D" parent="CanvasGroup/Leg1" unique_id=74401286]
+position = Vector2(2, 237)
+texture = ExtResource("4_mcwte")
+offset = Vector2(9, 134)
+
+[node name="Feet" type="Sprite2D" parent="CanvasGroup/Leg1/Leg2" unique_id=675173755]
+position = Vector2(10, 264)
+rotation = 1.134464
+texture = ExtResource("5_3dweh")
+offset = Vector2(-12, 36)
+flip_h = true
+
+[node name="Leg2" type="Sprite2D" parent="CanvasGroup" unique_id=1318079018]
+position = Vector2(24.064999, 377)
+texture = ExtResource("3_s0ygt")
+offset = Vector2(0, 131)
+
+[node name="Leg2" type="Sprite2D" parent="CanvasGroup/Leg2" unique_id=1779590623]
+position = Vector2(2, 237)
+texture = ExtResource("4_mcwte")
+offset = Vector2(9, 134)
+
+[node name="Feet" type="Sprite2D" parent="CanvasGroup/Leg2/Leg2" unique_id=169287367]
+position = Vector2(10, 264)
+rotation = 1.134464
+texture = ExtResource("5_3dweh")
+offset = Vector2(-12, 36)
+flip_h = true
+
+[node name="Torso" type="Sprite2D" parent="CanvasGroup" unique_id=1641637106]
+position = Vector2(-33, 377)
+texture = ExtResource("6_8d0my")
+offset = Vector2(17, -143)
+
+[node name="Hand2" type="Sprite2D" parent="CanvasGroup/Torso" unique_id=1872606769]
+z_index = -1
+position = Vector2(-52, -294)
+rotation = 3.1415927
+texture = ExtResource("7_8d0my")
+offset = Vector2(95, -7)
+
+[node name="Arm" type="Sprite2D" parent="CanvasGroup/Torso/Hand2" unique_id=1317832609]
+z_index = -1
+position = Vector2(204, -3)
+texture = ExtResource("8_r7mhc")
+offset = Vector2(92, 5)
+
+[node name="Hands" type="Sprite2D" parent="CanvasGroup/Torso/Hand2/Arm" unique_id=341966228]
+position = Vector2(187.46553, -4.2616205)
+texture = ExtResource("9_eoff5")
+offset = Vector2(-4, 25)
+flip_v = true
+
+[node name="Pistol" type="Sprite2D" parent="CanvasGroup/Torso/Hand2/Arm/Hands" unique_id=1760153842]
+z_index = 1
+position = Vector2(32.534485, 38.26158)
+rotation = 2.9216812
+texture = ExtResource("10_r7mhc")
+
+[node name="Hand" type="Sprite2D" parent="CanvasGroup/Torso" unique_id=235921619]
+position = Vector2(99, -287)
+texture = ExtResource("7_8d0my")
+offset = Vector2(95, -7)
+
+[node name="Arm" type="Sprite2D" parent="CanvasGroup/Torso/Hand" unique_id=1054727359]
+position = Vector2(204, -3)
+texture = ExtResource("8_r7mhc")
+offset = Vector2(92, 5)
+
+[node name="Hands" type="Sprite2D" parent="CanvasGroup/Torso/Hand/Arm" unique_id=1430285846]
+position = Vector2(179.7194, 2.3577118)
+rotation = -1.0522586
+texture = ExtResource("9_eoff5")
+offset = Vector2(15.457001, 22.553375)
+flip_h = true
+
+[node name="l_head" type="RemoteTransform2D" parent="CanvasGroup/Torso" unique_id=1722048448]
+position = Vector2(31, -353)
+remote_path = NodePath("../../Head")
+
+[node name="l_rightleg" type="RemoteTransform2D" parent="CanvasGroup/Torso" unique_id=272768484]
+position = Vector2(-31.315, 0)
+remote_path = NodePath("../../Leg1")
+
+[node name="l_leftleg" type="RemoteTransform2D" parent="CanvasGroup/Torso" unique_id=547657967]
+position = Vector2(57.065, 0)
+remote_path = NodePath("../../Leg2")
