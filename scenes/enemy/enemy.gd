@@ -9,6 +9,5 @@ const SPEED: float = .05
 func take_damage(amount: int) -> void:
 	hp_bar.value = max(0, hp_bar.value - amount)
 	hp_bar.visible = true 
-
-func destroy() -> void:
-	queue_free()
+	if hp_bar.value == 0:
+		queue_free()

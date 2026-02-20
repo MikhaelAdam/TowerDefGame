@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://cm7xiiyt21o2j" path="res://assets/image/mc/pistol.png" id="14_m0byq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfyjw"]
-radius = 67.18631
+radius = 228.1403
 
 [sub_resource type="Animation" id="Animation_yeg46"]
 length = 0.001
@@ -225,7 +225,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [1.5603243512829301, 1.5603243512829301]
+"values": [1.56032435128293, 1.56032435128293]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -237,7 +237,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-0.20245819323134262, -0.20245819323134262]
+"values": [-0.20245819323134265, -0.20245819323134265]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -297,7 +297,7 @@ tracks/8/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-0.2181661564992912, -0.10122909661567131]
+"values": [-0.2181661564992912, -0.10122909661567132]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -321,7 +321,7 @@ tracks/10/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [-0.04014257279586978, -0.012217304763960109]
+"values": [-0.04014257279586978, -0.0122173047639601]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -398,7 +398,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 1, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [1.5603243512829301, 1.5603243512829301, 1.5603243512829301]
+"values": [1.56032435128293, 1.56032435128293, 1.56032435128293]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -410,7 +410,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 1, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [-0.20245819323134262, -0.20245819323134262, -0.20245819323134262]
+"values": [-0.20245819323134265, -0.20245819323134265, -0.20245819323134265]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -470,7 +470,7 @@ tracks/8/keys = {
 "times": PackedFloat32Array(0, 1, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [0.0, -0.10122909661567131, 0.0]
+"values": [0.0, -0.10122909661567132, 0.0]
 }
 tracks/9/type = "value"
 tracks/9/imported = false
@@ -494,7 +494,7 @@ tracks/10/keys = {
 "times": PackedFloat32Array(0, 1, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [-0.11344640137963143, -0.21467549799530272, -0.11344640137963143]
+"values": [-0.11344640137963144, -0.21467549799530272, -0.11344640137963144]
 }
 tracks/11/type = "value"
 tracks/11/imported = false
@@ -540,12 +540,13 @@ _data = {
 &"idle": SubResource("Animation_lo3mj")
 }
 
-[node name="DefenderBasic" type="Area2D" unique_id=1509041264 node_paths=PackedStringArray("hp_bar", "animation_player") groups=["defender"]]
+[node name="DefenderBasic" type="Area2D" unique_id=1509041264 node_paths=PackedStringArray("hp_bar", "animation_player", "timer") groups=["defender"]]
 collision_mask = 16
 monitorable = false
 script = ExtResource("1_bfyjw")
 hp_bar = NodePath("ProgressBar")
 animation_player = NodePath("AnimationPlayer")
+timer = NodePath("Timer")
 metadata/_custom_type_script = "uid://fbl4gw0rubi0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1938391003]
@@ -584,15 +585,13 @@ script = ExtResource("3_lo3mj")
 script = ExtResource("4_rcs05")
 
 [node name="Police" type="Node2D" parent="." unique_id=1496343394]
-scale = Vector2(1.02, 1.02)
 
 [node name="CanvasGroup" type="CanvasGroup" parent="Police" unique_id=63060719]
 scale = Vector2(0.1, 0.1)
 
 [node name="Head" type="Sprite2D" parent="Police/CanvasGroup" unique_id=2116981797]
-position = Vector2(30.999992, -352.9999)
-rotation = -0.101229094
-scale = Vector2(0.99999976, 0.99999976)
+position = Vector2(30.999996, -352.99997)
+scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("5_yeg46")
 
 [node name="Hair" type="Sprite2D" parent="Police/CanvasGroup/Head" unique_id=1942493643]
@@ -600,22 +599,20 @@ position = Vector2(-16, -159)
 texture = ExtResource("6_7qedf")
 
 [node name="RightLeg" type="Sprite2D" parent="Police/CanvasGroup" unique_id=2035750849]
-position = Vector2(-31.314993, 0)
-rotation = 0.3211406
-scale = Vector2(0.99999976, 0.99999976)
+position = Vector2(-31.314995, 0)
+scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("7_p7ord")
 offset = Vector2(0, 131)
 
 [node name="Leg2" type="Sprite2D" parent="Police/CanvasGroup/RightLeg" unique_id=74401286]
-position = Vector2(4.314991, 243.00003)
-rotation = -0.30368727
+position = Vector2(4.314995, 243.00006)
 texture = ExtResource("8_eskjm")
 offset = Vector2(9, 134)
 
 [node name="RightFeet" type="Sprite2D" parent="Police/CanvasGroup/RightLeg/Leg2" unique_id=675173755]
-position = Vector2(10.000008, 259.99997)
-rotation = 1.3700835
-scale = Vector2(0.99999994, 0.99999994)
+position = Vector2(10.000002, 260)
+rotation = 0.96865773
+scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("9_yxc28")
 offset = Vector2(-12, 36)
 flip_h = true
@@ -630,22 +627,19 @@ position = Vector2(4.3149953, 243.00005)
 remote_path = NodePath("../Leg2")
 
 [node name="LeftLeg" type="Sprite2D" parent="Police/CanvasGroup" unique_id=1318079018]
-position = Vector2(57.064987, 0)
-rotation = -0.012217306
-scale = Vector2(0.9999997, 0.9999997)
+position = Vector2(57.06499, 0)
+scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("7_p7ord")
 offset = Vector2(0, 131)
 
 [node name="Leg2" type="Sprite2D" parent="Police/CanvasGroup/LeftLeg" unique_id=1779590623]
-position = Vector2(5.9350014, 243.00005)
-rotation = -0.20245822
-scale = Vector2(0.99999994, 0.99999994)
+position = Vector2(5.9350014, 243.00008)
 texture = ExtResource("8_eskjm")
 offset = Vector2(9, 134)
 
 [node name="LeftFeet" type="Sprite2D" parent="Police/CanvasGroup/LeftLeg/Leg2" unique_id=169287367]
-position = Vector2(10, 260)
-rotation = 1.5603243
+position = Vector2(10.000004, 260.00003)
+rotation = 0.8517207
 scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("9_yxc28")
 offset = Vector2(-12, 36)
@@ -661,28 +655,28 @@ position = Vector2(5.935002, 243.00006)
 remote_path = NodePath("../Leg2")
 
 [node name="Torso" type="Sprite2D" parent="Police/CanvasGroup" unique_id=1641637106]
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("10_cihfx")
 offset = Vector2(17, -143)
 
 [node name="RightHand" type="Sprite2D" parent="Police/CanvasGroup/Torso" unique_id=1872606769]
 z_index = -1
-position = Vector2(-47, -297)
-rotation = 2.7803094
-scale = Vector2(0.9999999, 0.9999999)
+position = Vector2(-47.000004, -297.00003)
+rotation = 2.0722318
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("11_y2hmd")
 offset = Vector2(95, -7)
 
 [node name="RightArm" type="Sprite2D" parent="Police/CanvasGroup/Torso/RightHand" unique_id=1317832609]
 z_index = -1
-position = Vector2(183.56458, 2.0108948)
-rotation = 0.30543262
+position = Vector2(183.56459, 2.0108643)
 texture = ExtResource("12_mvmfq")
 offset = Vector2(92, 5)
 
 [node name="Hands" type="Sprite2D" parent="Police/CanvasGroup/Torso/RightHand/RightArm" unique_id=341966228]
-position = Vector2(210.36052, -27.358398)
-rotation = -0.25132743
+position = Vector2(210.3605, -27.358398)
+rotation = -0.04877221
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("13_w2ag2")
 offset = Vector2(-4, 25)
 flip_v = true
@@ -703,15 +697,15 @@ position = Vector2(183.56459, 2.0108795)
 remote_path = NodePath("../RightArm")
 
 [node name="LeftHand" type="Sprite2D" parent="Police/CanvasGroup/Torso" unique_id=235921619]
-position = Vector2(103.00001, -287)
+position = Vector2(103, -286.99997)
 rotation = 1.1539732
-scale = Vector2(0.99999994, 0.99999994)
+scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("11_y2hmd")
 offset = Vector2(95, -7)
 
 [node name="LeftArm" type="Sprite2D" parent="Police/CanvasGroup/Torso/LeftHand" unique_id=1054727359]
-position = Vector2(192.33664, -2.5737457)
-rotation = 0.8813912
+position = Vector2(192.33665, -2.5737457)
+scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("12_mvmfq")
 offset = Vector2(92, 5)
 
@@ -755,3 +749,5 @@ remote_path = NodePath("../RightHand")
 
 [node name="torso" type="RemoteTransform2D" parent="Police/CanvasGroup" unique_id=1731543255]
 remote_path = NodePath("../Torso")
+
+[node name="Timer" type="Timer" parent="." unique_id=1497500275]
