@@ -4,3 +4,5 @@
 
 [node name="Defender" type="Area2D" unique_id=2053704257]
 script = ExtResource("1_rtfvy")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bd2gcmmqp2fog"]
+
+[ext_resource type="Script" uid="uid://hkj6sqf13wrt" path="res://scripts/hitbox.gd" id="1_7c8un"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_83itf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c6pnf"]
+
+[node name="Bullet" type="AnimatableBody2D" unique_id=346985001]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=603462684]
+shape = SubResource("CircleShape2D_83itf")
+debug_color = Color(0.9872224, 0, 0.32028112, 0.41960785)
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1225386572]
+monitoring = false
+script = ExtResource("1_7c8un")
+metadata/_custom_type_script = "uid://hkj6sqf13wrt"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=619749572]
+shape = SubResource("CircleShape2D_c6pnf")

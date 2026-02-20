@@ -8,8 +8,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfyjw"]
 radius = 20.0
 
-[node name="DefenderBasic" type="Area2D" unique_id=1509041264 groups=["defender"]]
+[node name="DefenderBasic" type="Area2D" unique_id=1509041264 node_paths=PackedStringArray("hp_bar", "animation_player") groups=["defender"]]
+monitorable = false
 script = ExtResource("1_bfyjw")
+hp_bar = NodePath("ProgressBar")
+animation_player = NodePath("AnimationPlayer")
 metadata/_custom_type_script = "uid://fbl4gw0rubi0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1938391003]
@@ -35,8 +38,9 @@ size_flags_vertical = 4
 show_percentage = false
 metadata/_edit_use_anchors_ = true
 
-[node name="StateMachine" type="Node" parent="." unique_id=289033677]
+[node name="StateMachine" type="Node" parent="." unique_id=289033677 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_44b41")
+initial_state = NodePath("Idle")
 metadata/_custom_type_script = "uid://dxtdgl2qwcrv0"
 
 [node name="Idle" type="Node" parent="StateMachine" unique_id=1477663343]

@@ -8,6 +8,10 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="BrGJ2026"
@@ -32,11 +36,11 @@ defender=""
 
 [layer_names]
 
-2d_physics/layer_1="protector"
-2d_physics/layer_2="protector_area"
+2d_physics/layer_1="defender"
+2d_physics/layer_2="hitbox"
 2d_physics/layer_3="enemy"
-2d_physics/layer_4="enemy_area"
-2d_physics/layer_5="attack"
+2d_physics/layer_4="hurtbox"
+2d_physics/layer_5="enemyscan"
 
 [physics]
 
