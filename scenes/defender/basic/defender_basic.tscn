@@ -6,7 +6,20 @@
 [ext_resource type="Script" uid="uid://depowfuse2tbe" path="res://scripts/states/defender/attack.gd" id="4_rcs05"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bfyjw"]
-radius = 20.0
+radius = 67.18631
+
+[sub_resource type="Animation" id="Animation_44b41"]
+resource_name = "attack"
+loop_mode = 1
+
+[sub_resource type="Animation" id="Animation_lo3mj"]
+resource_name = "idle"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rcs05"]
+_data = {
+&"attack": SubResource("Animation_44b41"),
+&"idle": SubResource("Animation_lo3mj")
+}
 
 [node name="DefenderBasic" type="Area2D" unique_id=1509041264 node_paths=PackedStringArray("hp_bar", "animation_player") groups=["defender"]]
 monitorable = false
@@ -19,6 +32,7 @@ metadata/_custom_type_script = "uid://fbl4gw0rubi0"
 shape = SubResource("CircleShape2D_bfyjw")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=774214995]
+libraries/ = SubResource("AnimationLibrary_rcs05")
 
 [node name="ProgressBar" type="ProgressBar" parent="." unique_id=134503113]
 anchors_preset = 8

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://88g8ccg12gvn" path="res://scenes/harvester/harvester.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://dowari1eptc43" path="res://scenes/main.gd" id="1_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b2hhnols2lwf4" path="res://scenes/enemy/basic/enemy_basic.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://d3m1xymt61pi2" path="res://scenes/defender/basic/defender_basic.tscn" id="4_jyhfs"]
 
 [sub_resource type="Curve2D" id="Curve2D_o5qli"]
 _data = {
@@ -31,5 +32,8 @@ autostart = true
 
 [node name="Path2D2" type="Path2D" parent="." unique_id=1987372161]
 curve = SubResource("Curve2D_sugp2")
+
+[node name="DefenderBasic" parent="." unique_id=1509041264 instance=ExtResource("4_jyhfs")]
+position = Vector2(352, 480)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
