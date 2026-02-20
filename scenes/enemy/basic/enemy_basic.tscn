@@ -22,8 +22,7 @@ _data = {
 [sub_resource type="CircleShape2D" id="CircleShape2D_bll0m"]
 radius = 23.021729
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_sejl8"]
-radius = 17.117243
+[sub_resource type="CircleShape2D" id="CircleShape2D_tgoa2"]
 
 [node name="EnemyBasic" type="PathFollow2D" unique_id=648356743 node_paths=PackedStringArray("hp_bar", "animation_player") groups=["enemy"]]
 rotates = false
@@ -55,8 +54,8 @@ value = 100.0
 show_percentage = false
 
 [node name="Hurtbox" type="Area2D" parent="." unique_id=579529254 node_paths=PackedStringArray("enemy")]
-collision_layer = 4
-collision_mask = 2
+collision_layer = 8
+collision_mask = 0
 monitorable = false
 script = ExtResource("2_bll0m")
 enemy = NodePath("..")
@@ -65,14 +64,6 @@ metadata/_custom_type_script = "uid://7r0bndag78gj"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1997106138]
 shape = SubResource("CircleShape2D_bll0m")
 debug_color = Color(0.96928734, 0, 0.4654646, 0.41960785)
-
-[node name="EnemyScan" type="Area2D" parent="." unique_id=1489816325]
-monitoring = false
-script = ExtResource("3_8m4vw")
-metadata/_custom_type_script = "uid://cen84trulduae"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyScan" unique_id=1562307296]
-shape = SubResource("CircleShape2D_sejl8")
 
 [node name="StateMachine" type="Node" parent="." unique_id=67872752 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("4_sejl8")
@@ -84,3 +75,13 @@ script = ExtResource("5_jp1u3")
 
 [node name="Die" type="Node" parent="StateMachine" unique_id=72922005]
 script = ExtResource("6_tgoa2")
+
+[node name="EnemyScan" type="Area2D" parent="." unique_id=1636752067]
+collision_layer = 16
+collision_mask = 0
+monitoring = false
+script = ExtResource("3_8m4vw")
+metadata/_custom_type_script = "uid://cen84trulduae"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyScan" unique_id=2145960749]
+shape = SubResource("CircleShape2D_tgoa2")

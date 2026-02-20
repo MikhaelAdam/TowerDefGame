@@ -37,8 +37,8 @@ defender=""
 [layer_names]
 
 2d_physics/layer_1="defender"
-2d_physics/layer_2="hitbox"
-2d_physics/layer_3="enemy"
+2d_physics/layer_2="enemy"
+2d_physics/layer_3="hitbox"
 2d_physics/layer_4="hurtbox"
 2d_physics/layer_5="enemyscan"
 
@@ -50,4 +50,3 @@ defender=""
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-renderer/rendering_method="mobile"
