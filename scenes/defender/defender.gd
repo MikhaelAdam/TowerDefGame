@@ -1,8 +1,6 @@
 extends Area2D
 class_name Defender
 
-
-@export var hp_bar: ProgressBar
 @export var animation_player: AnimationPlayer
 @export var attack_timer: Timer 
 @onready var has_see: bool = false
@@ -17,7 +15,8 @@ func _ready() -> void:
 
 func attack() -> void:
 	if can_attack:
-		enemy_scaner.owner.take_damage(20)
+		if enemy_scaner.owner.has_method("take_damage"):
+			enemy_scaner.owner.take_damage(20)
 		can_attack = false
 		attack_timer.start()
 
