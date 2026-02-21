@@ -5,8 +5,9 @@ func enter(previous_state_path: String, data := {}) -> void:
 	
 func physics_update(_delta: float) -> void:
 	if not defender.has_see:
-		await defender.animation_player.animation_finished
+		finished.emit(IDLE)
 	if defender.enemy_scaner:
-		defender.enemy_scaner.owner.take_damage(50)
+		defender.attack()
 	else:
+		await defender.attack_timer.timeout
 		finished.emit(IDLE)
