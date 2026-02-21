@@ -2,11 +2,17 @@
 
 [ext_resource type="Script" uid="uid://3q0er4mn2nwp" path="res://scenes/harvester/harvester.gd" id="1_2536x"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvi1f"]
-size = Vector2(46, 618)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2536x"]
+size = Vector2(86, 87)
 
 [node name="Harvester" type="Area2D" unique_id=29287158]
+collision_layer = 0
+collision_mask = 16
+monitorable = false
 script = ExtResource("1_2536x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1889377012]
-shape = SubResource("RectangleShape2D_tvi1f")
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_2536x")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -1,8 +1,8 @@
 extends DefenderState
 
-func enter(previous_state_path: String, data := {}) -> void:
-	defender.animation_player.play("attack")
-	
+func enter(_previous_state_path: String, _data := {}) -> void:
+	if defender.animation_player.has_animation("attack"):
+		defender.animation_player.play("attack")
 func physics_update(_delta: float) -> void:
 	if not defender.has_see:
 		finished.emit(IDLE)

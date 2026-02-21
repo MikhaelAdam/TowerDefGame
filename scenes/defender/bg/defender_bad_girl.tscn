@@ -1,0 +1,767 @@
+[gd_scene format=3 uid="uid://7cf2jsklxgau"]
+
+[ext_resource type="Script" uid="uid://fbl4gw0rubi0" path="res://scenes/defender/defender.gd" id="1_vo6pc"]
+[ext_resource type="Script" uid="uid://dxtdgl2qwcrv0" path="res://scripts/states/statemachine.gd" id="2_6jcfm"]
+[ext_resource type="Script" uid="uid://cuu2gghcjuom" path="res://scripts/states/defender/idle.gd" id="3_6w8k8"]
+[ext_resource type="Script" uid="uid://depowfuse2tbe" path="res://scripts/states/defender/attack.gd" id="4_5uoj2"]
+[ext_resource type="Texture2D" uid="uid://y4tsyy2vuwvs" path="res://assets/image/badgirl/head.png" id="5_ubfse"]
+[ext_resource type="Texture2D" uid="uid://rlp684f0lu7s" path="res://assets/image/badgirl/hair1.png" id="6_16q3t"]
+[ext_resource type="Texture2D" uid="uid://ddnqfb0kpxexp" path="res://assets/image/badgirl/hair2.png" id="7_d2k3k"]
+[ext_resource type="Texture2D" uid="uid://digm5hpr7h42h" path="res://assets/image/badgirl/paha.png" id="8_3po86"]
+[ext_resource type="Texture2D" uid="uid://cq31cwgo5t3iq" path="res://assets/image/badgirl/betis.png" id="9_dmb2n"]
+[ext_resource type="Texture2D" uid="uid://4grq7yrva74e" path="res://assets/image/badgirl/feet.png" id="10_2of85"]
+[ext_resource type="Texture2D" uid="uid://lbh2oklb7d7g" path="res://assets/image/badgirl/torso.png" id="11_04idk"]
+[ext_resource type="Texture2D" uid="uid://bghcvtwq1jvhk" path="res://assets/image/badgirl/shoulders.png" id="12_ygvyb"]
+[ext_resource type="Texture2D" uid="uid://b4yhkyctln0ax" path="res://assets/image/badgirl/forearm.png" id="13_omagb"]
+[ext_resource type="Texture2D" uid="uid://7w6t5ffnea28" path="res://assets/image/badgirl/hand.png" id="14_sd566"]
+[ext_resource type="Texture2D" uid="uid://bykhng0gh2st6" path="res://assets/image/badgirl/guital.png" id="15_nnhda"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6jcfm"]
+radius = 110.29053
+
+[sub_resource type="Animation" id="Animation_ubfse"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BadGirl/CanvasGroup/Torso/l_head:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.19924922]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BadGirl/CanvasGroup/torso:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BadGirl/CanvasGroup/Torso/l_arm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.04717338]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BadGirl/CanvasGroup/Torso/r_arm:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.3623261]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BadGirl/CanvasGroup/RightLeg/Leg2/r_feet:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.96865773]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BadGirl/CanvasGroup/RightLeg/r_leg:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BadGirl/CanvasGroup/LeftLeg/Leg2/l_feet:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.8517207]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BadGirl/CanvasGroup/LeftLeg/l_leg:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("BadGirl/CanvasGroup/Torso/RightHand/RightArm/r_hands:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.048772223]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("BadGirl/CanvasGroup/Torso/RightHand/r_armlimb:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.109066695]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BadGirl/CanvasGroup/Torso/LeftHand/LeftArm/l_hands:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.067487985]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("BadGirl/CanvasGroup/Torso/LeftHand/l_armlimb:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.20926458]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("BadGirl/CanvasGroup/Torso/l_rightleg:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("BadGirl/CanvasGroup/Torso/l_leftleg:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_snbhj"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BadGirl/CanvasGroup/Torso/l_head:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.19924922, 0.19924922, 0.19924922]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BadGirl/CanvasGroup/torso:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.08203047484373328, -0.038397243543875054, -0.08203047484373328]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BadGirl/CanvasGroup/Torso/l_arm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.7837264955382046, 1.2426744274199624, 1.7837264955382046]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BadGirl/CanvasGroup/Torso/r_arm:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.1973695282608605, 1.7837264955382046, 2.1973695282608605]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BadGirl/CanvasGroup/RightLeg/Leg2/r_feet:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.7959438003021646, 1.7959438003021646, 1.7959438003021646]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BadGirl/CanvasGroup/RightLeg/r_leg:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.15707963267948966, 0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BadGirl/CanvasGroup/LeftLeg/Leg2/l_feet:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.7959438003021646, 1.7959438003021646, 1.7959438003021646]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BadGirl/CanvasGroup/LeftLeg/l_leg:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.15882496193148438, -0.03665191429188132, -0.15882496193148438]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("BadGirl/CanvasGroup/Torso/RightHand/RightArm/r_hands:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.048772223, -0.048772223, -0.048772223]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("BadGirl/CanvasGroup/Torso/RightHand/r_armlimb:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.3473941825396223, -1.3473941825396223, -1.3473941825396223]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BadGirl/CanvasGroup/Torso/LeftHand/LeftArm/l_hands:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.067487985, -0.067487985, -0.067487985]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("BadGirl/CanvasGroup/Torso/LeftHand/l_armlimb:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.8570303241219668, -1.8570303241219668, -1.8570303241219668]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("BadGirl/CanvasGroup/Torso/l_rightleg:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.08203047484373328, 0.08203047484373328, 0.08203047484373328]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("BadGirl/CanvasGroup/Torso/l_leftleg:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.3, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.08203047484373328, 0.08203047484373328, 0.08203047484373328]
+}
+
+[sub_resource type="Animation" id="Animation_6w8k8"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BadGirl/CanvasGroup/Torso/l_head:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.19924922, 0.015707963267948568, 0.19924922]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BadGirl/CanvasGroup/torso:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.08203047484373328, 0.0, -0.08203047484373328]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BadGirl/CanvasGroup/Torso/l_arm:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.7837264955382046, 2.1153390534171272, 1.7837264955382046]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BadGirl/CanvasGroup/Torso/r_arm:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [2.1973695282608605, 2.3631758072003217, 2.1973696]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BadGirl/CanvasGroup/RightLeg/Leg2/r_feet:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.7959438003021646]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BadGirl/CanvasGroup/RightLeg/r_leg:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BadGirl/CanvasGroup/LeftLeg/Leg2/l_feet:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.7959438003021646]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("BadGirl/CanvasGroup/LeftLeg/l_leg:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 1.0333333, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.15882496193148438, -0.4886921905584123, -0.15882496193148438]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("BadGirl/CanvasGroup/Torso/RightHand/RightArm/r_hands:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.048772223]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("BadGirl/CanvasGroup/Torso/RightHand/r_armlimb:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.3473941825396223]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("BadGirl/CanvasGroup/Torso/LeftHand/LeftArm/l_hands:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.067487985]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("BadGirl/CanvasGroup/Torso/LeftHand/l_armlimb:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.8570303241219668]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("BadGirl/CanvasGroup/Torso/l_rightleg:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.08203047484373328, 0.082030475, 0.08203047484373328]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("BadGirl/CanvasGroup/Torso/l_leftleg:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.08203047484373328]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5uoj2"]
+_data = {
+&"RESET": SubResource("Animation_ubfse"),
+&"attack": SubResource("Animation_snbhj"),
+&"idle": SubResource("Animation_6w8k8")
+}
+
+[node name="DefenderBadGirl" type="Area2D" unique_id=1898553758 node_paths=PackedStringArray("animation_player", "attack_timer")]
+collision_mask = 16
+monitorable = false
+script = ExtResource("1_vo6pc")
+animation_player = NodePath("AnimationPlayer")
+attack_timer = NodePath("AttackTimer")
+many = true
+metadata/_custom_type_script = "uid://fbl4gw0rubi0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1466728827]
+shape = SubResource("CircleShape2D_6jcfm")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=644459619]
+libraries/ = SubResource("AnimationLibrary_5uoj2")
+
+[node name="StateMachine" type="Node" parent="." unique_id=785067315 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_6jcfm")
+initial_state = NodePath("Idle")
+metadata/_custom_type_script = "uid://dxtdgl2qwcrv0"
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=697559657]
+script = ExtResource("3_6w8k8")
+
+[node name="Attack" type="Node" parent="StateMachine" unique_id=1184392594]
+script = ExtResource("4_5uoj2")
+
+[node name="AttackTimer" type="Timer" parent="." unique_id=1313132728]
+one_shot = true
+
+[node name="BadGirl" type="Node2D" parent="." unique_id=1494664370]
+scale = Vector2(0.17, 0.17)
+
+[node name="CanvasGroup" type="CanvasGroup" parent="BadGirl" unique_id=1396583975]
+
+[node name="Head" type="Sprite2D" parent="BadGirl/CanvasGroup" unique_id=1580772162]
+z_index = -1
+position = Vector2(16.92272, -282.33597)
+rotation = 0.11721875
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("5_ubfse")
+offset = Vector2(-40.000008, -99.99997)
+
+[node name="Hair" type="Sprite2D" parent="BadGirl/CanvasGroup/Head" unique_id=487265651]
+position = Vector2(-40, -90.00002)
+texture = ExtResource("6_16q3t")
+
+[node name="Hair2" type="Sprite2D" parent="BadGirl/CanvasGroup/Head" unique_id=1989362164]
+z_index = -1
+position = Vector2(-20.000006, -20.000004)
+texture = ExtResource("7_d2k3k")
+
+[node name="RightLeg" type="Sprite2D" parent="BadGirl/CanvasGroup" unique_id=2035538794]
+z_index = -3
+position = Vector2(-31.209696, 2.5659041)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("8_3po86")
+offset = Vector2(0, 131)
+
+[node name="Leg2" type="Sprite2D" parent="BadGirl/CanvasGroup/RightLeg" unique_id=1857195277]
+position = Vector2(4.314995, 243.00005)
+texture = ExtResource("9_dmb2n")
+offset = Vector2(9, 134)
+
+[node name="RightFeet" type="Sprite2D" parent="BadGirl/CanvasGroup/RightLeg/Leg2" unique_id=1268136888]
+position = Vector2(6.999998, 247)
+rotation = 1.7959439
+texture = ExtResource("10_2of85")
+offset = Vector2(13.131836, 33.72737)
+flip_h = true
+
+[node name="r_feet" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/RightLeg/Leg2" unique_id=1162074792]
+position = Vector2(6.999999, 247)
+rotation = 0.96865773
+remote_path = NodePath("../RightFeet")
+
+[node name="r_leg" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/RightLeg" unique_id=1072623834]
+position = Vector2(4.3149953, 243.00005)
+remote_path = NodePath("../Leg2")
+
+[node name="LeftLeg" type="Sprite2D" parent="BadGirl/CanvasGroup" unique_id=1841919828]
+z_index = -3
+position = Vector2(39.86549, -3.27754)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("8_3po86")
+offset = Vector2(0, 131)
+
+[node name="Leg2" type="Sprite2D" parent="BadGirl/CanvasGroup/LeftLeg" unique_id=1771821735]
+position = Vector2(5.9350014, 243.00006)
+rotation = -0.15882495
+texture = ExtResource("9_dmb2n")
+offset = Vector2(9, 134)
+
+[node name="LeftFeet" type="Sprite2D" parent="BadGirl/CanvasGroup/LeftLeg/Leg2" unique_id=1845316418]
+position = Vector2(4.0650215, 246.99994)
+rotation = 1.7959439
+texture = ExtResource("10_2of85")
+offset = Vector2(11.921417, 35.61685)
+flip_h = true
+
+[node name="l_feet" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/LeftLeg/Leg2" unique_id=721668528]
+position = Vector2(4.065019, 246.99997)
+rotation = 0.8517207
+remote_path = NodePath("../LeftFeet")
+
+[node name="l_leg" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/LeftLeg" unique_id=1743356022]
+position = Vector2(5.935002, 243.00006)
+remote_path = NodePath("../Leg2")
+
+[node name="Torso" type="Sprite2D" parent="BadGirl/CanvasGroup" unique_id=2056110735]
+z_index = -1
+rotation = -0.082030475
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("11_04idk")
+offset = Vector2(17, -143)
+
+[node name="RightHand" type="Sprite2D" parent="BadGirl/CanvasGroup/Torso" unique_id=287050470]
+position = Vector2(-30.000011, -259.99997)
+rotation = 2.1973696
+scale = Vector2(0.9999998, 0.9999998)
+texture = ExtResource("12_ygvyb")
+offset = Vector2(69.908264, -4.8346252)
+flip_h = true
+flip_v = true
+
+[node name="RightArm" type="Sprite2D" parent="BadGirl/CanvasGroup/Torso/RightHand" unique_id=623046979]
+position = Vector2(141.24529, -29.150864)
+rotation = -1.3473942
+texture = ExtResource("13_omagb")
+offset = Vector2(59.90738, -11.502075)
+flip_h = true
+flip_v = true
+
+[node name="Hands" type="Sprite2D" parent="BadGirl/CanvasGroup/Torso/RightHand/RightArm" unique_id=774168578]
+z_index = 1
+position = Vector2(123.102066, -23.36417)
+rotation = -0.048772264
+texture = ExtResource("14_sd566")
+offset = Vector2(29.90033, 3.395691)
+flip_v = true
+
+[node name="Guitar" type="Sprite2D" parent="BadGirl/CanvasGroup/Torso/RightHand/RightArm/Hands" unique_id=1298100069]
+z_index = -1
+position = Vector2(33.935204, 12.182158)
+rotation = 5.779821
+texture = ExtResource("15_nnhda")
+offset = Vector2(102.63245, -117.33304)
+
+[node name="r_hands" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/Torso/RightHand/RightArm" unique_id=401780330]
+position = Vector2(123.102066, -23.364164)
+rotation = -0.048772223
+remote_path = NodePath("../Hands")
+
+[node name="r_armlimb" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/Torso/RightHand" unique_id=1890828317]
+position = Vector2(141.24529, -29.15086)
+rotation = -0.109066695
+remote_path = NodePath("../RightArm")
+
+[node name="LeftHand" type="Sprite2D" parent="BadGirl/CanvasGroup/Torso" unique_id=399465590]
+z_index = -1
+position = Vector2(100.00003, -260)
+rotation = 1.7837265
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("12_ygvyb")
+offset = Vector2(54.96466, -11.681168)
+flip_h = true
+flip_v = true
+
+[node name="LeftArm" type="Sprite2D" parent="BadGirl/CanvasGroup/Torso/LeftHand" unique_id=556921818]
+z_index = -1
+position = Vector2(118.92334, -25.636444)
+rotation = -1.8570303
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("13_omagb")
+offset = Vector2(60.467453, -13.961395)
+flip_h = true
+flip_v = true
+
+[node name="Hands" type="Sprite2D" parent="BadGirl/CanvasGroup/Torso/LeftHand/LeftArm" unique_id=800111251]
+z_index = -1
+position = Vector2(114.311844, -24.377304)
+rotation = -0.067488
+texture = ExtResource("14_sd566")
+offset = Vector2(24.46598, 6.6532745)
+flip_h = true
+
+[node name="l_hands" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/Torso/LeftHand/LeftArm" unique_id=1058397938]
+position = Vector2(114.311844, -24.3773)
+rotation = -0.067487985
+remote_path = NodePath("../Hands")
+
+[node name="l_armlimb" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/Torso/LeftHand" unique_id=247016230]
+position = Vector2(118.923355, -25.636438)
+rotation = 0.20926458
+remote_path = NodePath("../LeftArm")
+
+[node name="l_head" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/Torso" unique_id=1478380609]
+position = Vector2(40.000008, -280)
+rotation = 0.19924922
+remote_path = NodePath("../../Head")
+
+[node name="l_rightleg" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/Torso" unique_id=562913935]
+position = Vector2(-31.315, 0)
+remote_path = NodePath("../../RightLeg")
+update_rotation = false
+
+[node name="l_leftleg" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/Torso" unique_id=1282023121]
+position = Vector2(40, 0)
+remote_path = NodePath("../../LeftLeg")
+update_rotation = false
+
+[node name="l_arm" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/Torso" unique_id=326649710]
+position = Vector2(100.00004, -260.00003)
+rotation = 0.04717338
+scale = Vector2(0.99999994, 0.99999994)
+remote_path = NodePath("../LeftHand")
+
+[node name="r_arm" type="RemoteTransform2D" parent="BadGirl/CanvasGroup/Torso" unique_id=1484370250]
+position = Vector2(-30.000015, -260)
+rotation = 2.3623261
+scale = Vector2(0.99999994, 0.99999994)
+remote_path = NodePath("../RightHand")
+
+[node name="torso" type="RemoteTransform2D" parent="BadGirl/CanvasGroup" unique_id=104557800]
+remote_path = NodePath("../Torso")

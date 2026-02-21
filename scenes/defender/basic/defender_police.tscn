@@ -4,19 +4,20 @@
 [ext_resource type="Script" uid="uid://dxtdgl2qwcrv0" path="res://scripts/states/statemachine.gd" id="2_44b41"]
 [ext_resource type="Script" uid="uid://cuu2gghcjuom" path="res://scripts/states/defender/idle.gd" id="3_lo3mj"]
 [ext_resource type="Script" uid="uid://depowfuse2tbe" path="res://scripts/states/defender/attack.gd" id="4_rcs05"]
-[ext_resource type="Texture2D" uid="uid://c5fr00dxs23sa" path="res://assets/image/mc/head.png" id="5_yeg46"]
-[ext_resource type="Texture2D" uid="uid://vw7fqk2wtrq8" path="res://assets/image/mc/hair.png" id="6_7qedf"]
-[ext_resource type="Texture2D" uid="uid://d0wngsd4eoiv6" path="res://assets/image/mc/leg1.png" id="7_p7ord"]
+[ext_resource type="Texture2D" uid="uid://eea25e46omjh" path="res://assets/image/police/head.png" id="5_4j6w0"]
+[ext_resource type="Texture2D" uid="uid://b1vrkdwov6qi7" path="res://assets/image/police/hair.png" id="6_bsb25"]
+[ext_resource type="Texture2D" uid="uid://dlyvko0bxyotd" path="res://assets/image/police/thigh.png" id="7_31ty6"]
 [ext_resource type="Texture2D" uid="uid://c7r1awm8w0wp3" path="res://assets/image/mc/leg2.png" id="8_eskjm"]
-[ext_resource type="Texture2D" uid="uid://c3xsng2whnnq1" path="res://assets/image/mc/feet.png" id="9_yxc28"]
-[ext_resource type="Texture2D" uid="uid://bi4k5l761jdx1" path="res://assets/image/mc/torso.png" id="10_cihfx"]
-[ext_resource type="Texture2D" uid="uid://blde7ifmf07yu" path="res://assets/image/mc/hand.png" id="11_y2hmd"]
-[ext_resource type="Texture2D" uid="uid://brudwldat133m" path="res://assets/image/mc/arm.png" id="12_mvmfq"]
-[ext_resource type="Texture2D" uid="uid://djqol45qenbup" path="res://assets/image/mc/hands.png" id="13_w2ag2"]
+[ext_resource type="Texture2D" uid="uid://cyvb7fk10k7j" path="res://assets/image/police/feet.png" id="9_hvyga"]
+[ext_resource type="Texture2D" uid="uid://bxlj0xe27wepc" path="res://assets/image/police/leg.png" id="10_8eps4"]
+[ext_resource type="Texture2D" uid="uid://b24ps0exb1iwk" path="res://assets/image/police/torso.png" id="11_rpfsd"]
+[ext_resource type="Texture2D" uid="uid://cyq27a3o5ra10" path="res://assets/image/police/shoulder.png" id="12_p0q60"]
+[ext_resource type="Texture2D" uid="uid://cx7kau2dvmvyg" path="res://assets/image/police/forearm.png" id="13_8474e"]
+[ext_resource type="Texture2D" uid="uid://coerge0pwtkqg" path="res://assets/image/police/hand.png" id="14_4j6w0"]
 [ext_resource type="Texture2D" uid="uid://cm7xiiyt21o2j" path="res://assets/image/mc/pistol.png" id="14_m0byq"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_bfyjw"]
-radius = 228.1403
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1hl2"]
+size = Vector2(443, 282)
 
 [sub_resource type="Animation" id="Animation_yeg46"]
 length = 0.001
@@ -550,7 +551,8 @@ attack_timer = NodePath("AttackTimer")
 metadata/_custom_type_script = "uid://fbl4gw0rubi0"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1938391003]
-shape = SubResource("CircleShape2D_bfyjw")
+position = Vector2(-66.5, 8)
+shape = SubResource("RectangleShape2D_w1hl2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=774214995]
 libraries/ = SubResource("AnimationLibrary_rcs05")
@@ -567,35 +569,37 @@ script = ExtResource("3_lo3mj")
 script = ExtResource("4_rcs05")
 
 [node name="Police" type="Node2D" parent="." unique_id=1496343394]
+position = Vector2(0, -63)
+scale = Vector2(0.17, 0.17)
 
 [node name="CanvasGroup" type="CanvasGroup" parent="Police" unique_id=63060719]
-scale = Vector2(0.1, 0.1)
 
 [node name="Head" type="Sprite2D" parent="Police/CanvasGroup" unique_id=2116981797]
-position = Vector2(30.999996, -352.99997)
+position = Vector2(30.999994, -352.99994)
 scale = Vector2(0.9999998, 0.9999998)
-texture = ExtResource("5_yeg46")
+texture = ExtResource("5_4j6w0")
 
 [node name="Hair" type="Sprite2D" parent="Police/CanvasGroup/Head" unique_id=1942493643]
 position = Vector2(-16, -159)
-texture = ExtResource("6_7qedf")
+texture = ExtResource("6_bsb25")
 
 [node name="RightLeg" type="Sprite2D" parent="Police/CanvasGroup" unique_id=2035750849]
 position = Vector2(-31.314995, 0)
-scale = Vector2(0.9999998, 0.9999998)
-texture = ExtResource("7_p7ord")
+rotation = 0.33859384
+scale = Vector2(0.99999976, 0.99999976)
+texture = ExtResource("7_31ty6")
 offset = Vector2(0, 131)
 
 [node name="Leg2" type="Sprite2D" parent="Police/CanvasGroup/RightLeg" unique_id=74401286]
-position = Vector2(4.314995, 243.00006)
+position = Vector2(4.314987, 243.00005)
+rotation = -0.30368727
 texture = ExtResource("8_eskjm")
 offset = Vector2(9, 134)
 
 [node name="RightFeet" type="Sprite2D" parent="Police/CanvasGroup/RightLeg/Leg2" unique_id=675173755]
-position = Vector2(10.000002, 260)
-rotation = 0.96865773
-scale = Vector2(1.0000001, 1.0000001)
-texture = ExtResource("9_yxc28")
+position = Vector2(10, 260)
+rotation = 1.3700835
+texture = ExtResource("9_hvyga")
 offset = Vector2(-12, 36)
 flip_h = true
 
@@ -609,21 +613,22 @@ position = Vector2(4.3149953, 243.00005)
 remote_path = NodePath("../Leg2")
 
 [node name="LeftLeg" type="Sprite2D" parent="Police/CanvasGroup" unique_id=1318079018]
-position = Vector2(57.06499, 0)
-scale = Vector2(0.9999998, 0.9999998)
-texture = ExtResource("7_p7ord")
+position = Vector2(57.064987, 0)
+rotation = -0.005235988
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("7_31ty6")
 offset = Vector2(0, 131)
 
 [node name="Leg2" type="Sprite2D" parent="Police/CanvasGroup/LeftLeg" unique_id=1779590623]
-position = Vector2(5.9350014, 243.00008)
-texture = ExtResource("8_eskjm")
+position = Vector2(5.935005, 243.00006)
+rotation = -0.20245817
+texture = ExtResource("10_8eps4")
 offset = Vector2(9, 134)
 
 [node name="LeftFeet" type="Sprite2D" parent="Police/CanvasGroup/LeftLeg/Leg2" unique_id=169287367]
-position = Vector2(10.000004, 260.00003)
-rotation = 0.8517207
-scale = Vector2(1.0000001, 1.0000001)
-texture = ExtResource("9_yxc28")
+position = Vector2(10, 260)
+rotation = 1.5603243
+texture = ExtResource("9_hvyga")
 offset = Vector2(-12, 36)
 flip_h = true
 
@@ -637,29 +642,31 @@ position = Vector2(5.935002, 243.00006)
 remote_path = NodePath("../Leg2")
 
 [node name="Torso" type="Sprite2D" parent="Police/CanvasGroup" unique_id=1641637106]
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("10_cihfx")
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("11_rpfsd")
 offset = Vector2(17, -143)
 
 [node name="RightHand" type="Sprite2D" parent="Police/CanvasGroup/Torso" unique_id=1872606769]
 z_index = -1
-position = Vector2(-47.000004, -297.00003)
+position = Vector2(-47, -297)
 rotation = 2.0722318
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("11_y2hmd")
-offset = Vector2(95, -7)
+scale = Vector2(0.9999999, 0.9999999)
+texture = ExtResource("12_p0q60")
+offset = Vector2(83.57201, 7.784897)
+flip_h = true
 
 [node name="RightArm" type="Sprite2D" parent="Police/CanvasGroup/Torso/RightHand" unique_id=1317832609]
 z_index = -1
-position = Vector2(183.56459, 2.0108643)
-texture = ExtResource("12_mvmfq")
-offset = Vector2(92, 5)
+position = Vector2(183.5646, 2.0108643)
+rotation = 2.534218
+texture = ExtResource("13_8474e")
+offset = Vector2(86.08676, 2.013008)
+flip_h = true
 
 [node name="Hands" type="Sprite2D" parent="Police/CanvasGroup/Torso/RightHand/RightArm" unique_id=341966228]
-position = Vector2(210.3605, -27.358398)
-rotation = -0.04877221
-scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("13_w2ag2")
+position = Vector2(210.36047, -27.35839)
+rotation = -0.048772227
+texture = ExtResource("14_4j6w0")
 offset = Vector2(-4, 25)
 flip_v = true
 
@@ -679,21 +686,22 @@ position = Vector2(183.56459, 2.0108795)
 remote_path = NodePath("../RightArm")
 
 [node name="LeftHand" type="Sprite2D" parent="Police/CanvasGroup/Torso" unique_id=235921619]
-position = Vector2(103, -286.99997)
+position = Vector2(103, -287)
 rotation = 1.1539732
 scale = Vector2(0.9999999, 0.9999999)
-texture = ExtResource("11_y2hmd")
-offset = Vector2(95, -7)
+texture = ExtResource("12_p0q60")
+offset = Vector2(95.552795, 3.3650818)
+flip_h = true
 
 [node name="LeftArm" type="Sprite2D" parent="Police/CanvasGroup/Torso/LeftHand" unique_id=1054727359]
-position = Vector2(192.33665, -2.5737457)
-scale = Vector2(1.0000001, 1.0000001)
-texture = ExtResource("12_mvmfq")
+position = Vector2(192.33664, -2.5737915)
+rotation = 0.8813912
+texture = ExtResource("13_8474e")
 offset = Vector2(92, 5)
 
 [node name="Hands" type="Sprite2D" parent="Police/CanvasGroup/Torso/LeftHand/LeftArm" unique_id=1430285846]
-position = Vector2(187.78119, -6.1827393)
-texture = ExtResource("13_w2ag2")
+position = Vector2(187.78122, -6.182724)
+texture = ExtResource("14_4j6w0")
 offset = Vector2(15.457001, 22.553375)
 flip_h = true
 
@@ -712,10 +720,12 @@ remote_path = NodePath("../../Head")
 [node name="l_rightleg" type="RemoteTransform2D" parent="Police/CanvasGroup/Torso" unique_id=272768484]
 position = Vector2(-31.315, 0)
 remote_path = NodePath("../../RightLeg")
+update_rotation = false
 
 [node name="l_leftleg" type="RemoteTransform2D" parent="Police/CanvasGroup/Torso" unique_id=547657967]
 position = Vector2(57.065, 0)
 remote_path = NodePath("../../LeftLeg")
+update_rotation = false
 
 [node name="l_arm" type="RemoteTransform2D" parent="Police/CanvasGroup/Torso" unique_id=475636721]
 position = Vector2(103, -286.99997)

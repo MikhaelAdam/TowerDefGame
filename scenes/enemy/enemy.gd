@@ -3,7 +3,7 @@ class_name Enemy
 
 @export var hp_bar: ProgressBar
 @export var animation_player: AnimationPlayer 
-
+@export var damage: int = 10
 const SPEED: float = .05
 
 func _ready() -> void:
