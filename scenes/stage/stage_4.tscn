@@ -189,3 +189,6 @@ position = Vector2(975, 182)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2052212476]
 
 [node name="BattleUI" parent="CanvasLayer" unique_id=168384880 instance=ExtResource("6_s8cu6")]
+
+[node name="MapTimer" type="Timer" parent="." unique_id=1566870069]
+wait_time = 4.0

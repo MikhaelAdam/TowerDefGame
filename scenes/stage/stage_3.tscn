@@ -119,6 +119,7 @@ metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
 shape = SubResource("RectangleShape2D_dox8q")
 
 [node name="PlacementArea10" type="Area2D" parent="." unique_id=171663466]
+visible = false
 position = Vector2(633, 100)
 script = ExtResource("5_2jqr5")
 metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
@@ -204,3 +205,6 @@ position = Vector2(1076, 489)
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1376502167]
 
 [node name="BattleUI" parent="CanvasLayer" unique_id=168384880 instance=ExtResource("6_dox8q")]
+
+[node name="MapTimer" type="Timer" parent="." unique_id=1369109127]
+wait_time = 4.0

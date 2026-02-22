@@ -463,3 +463,6 @@ curve = SubResource("Curve2D_y3agc")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=255836736]
 
 [node name="BattleUI" parent="CanvasLayer" unique_id=168384880 instance=ExtResource("5_olrfe")]
+
+[node name="MapTimer" type="Timer" parent="." unique_id=40018101]
+wait_time = 3.0

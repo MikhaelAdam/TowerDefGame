@@ -15,7 +15,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="BrGJ2026"
-run/main_scene="uid://im37b05iofnv"
+run/main_scene="uid://bc3lw11646b6b"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 

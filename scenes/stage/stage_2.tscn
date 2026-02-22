@@ -214,3 +214,6 @@ shape = SubResource("RectangleShape2D_r8xlp")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=340315913]
 
 [node name="BattleUI" parent="CanvasLayer" unique_id=168384880 instance=ExtResource("6_f57m5")]
+
+[node name="MapTimer" type="Timer" parent="." unique_id=881617575]
+wait_time = 5.0

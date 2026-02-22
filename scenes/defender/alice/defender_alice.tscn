@@ -270,7 +270,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nnoro"]
-radius = 111.75867
+radius = 168.14577
 
 [node name="DefenderAlice" type="Area2D" unique_id=1060551954 node_paths=PackedStringArray("animation_player", "attack_timer")]
 collision_mask = 16
@@ -299,7 +299,7 @@ script = ExtResource("4_tnftr")
 shape = SubResource("CircleShape2D_nnoro")
 
 [node name="AttackTimer" type="Timer" parent="." unique_id=261862151]
-wait_time = 2.0
+wait_time = 3.0
 one_shot = true
 
 [node name="Alice" type="Node2D" parent="." unique_id=1425419980]
@@ -327,7 +327,7 @@ texture = ExtResource("7_2auju")
 
 [node name="RightFeet" type="Sprite2D" parent="Alice/CanvasGroup" unique_id=915440628]
 z_index = -3
-position = Vector2(-59.48032, 169.99747)
+position = Vector2(-59.480278, 169.99733)
 rotation = -0.005192568
 scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("8_hsem0")
@@ -335,7 +335,7 @@ offset = Vector2(0, 131)
 
 [node name="LeftLeg" type="Sprite2D" parent="Alice/CanvasGroup" unique_id=608573220]
 z_index = -3
-position = Vector2(108.960754, 118.96152)
+position = Vector2(108.96068, 118.96141)
 rotation = 0.0037021097
 scale = Vector2(0.9999998, 0.9999998)
 texture = ExtResource("9_qeywn")

@@ -4,7 +4,7 @@ class_name Defender
 @export var animation_player: AnimationPlayer
 @export var attack_timer: Timer 
 @export var many: bool = false
-@export var damage: int = 20
+@export var damage: int = 40
 @onready var has_see: bool = false
 @onready var can_attack: bool = true
 @onready var enemy_scaner: EnemyScan

@@ -50,12 +50,7 @@ func _ready() -> void:
 			
 			add_child(timer)
 			path_timers.append(timer)
-func _process(delta: float) -> void:
-	for pt in paths:
-		if pt.get_child_count() == 0:
-			await get_tree().create_timer(time_spawn + 1).timeout
-			if pt.get_child_count() == 0:
-				get_tree().change_scene_to_file(next_level)
+			
 func spawn_emeny(path: Path2D) -> void:
 	if max_enemies > 0:
 		var enemy := Singleton.ENEMY_BASIC.instantiate()
@@ -63,8 +58,9 @@ func spawn_emeny(path: Path2D) -> void:
 		max_enemies -= 1
 		battle_ui.label.text = "Enemies Left :" + str(max_enemies)
 	else:
-		for pt in path_timers:
-			pt.stop()
+		for pt in paths:
+			if pt.get_child_count() == 0:
+				get_tree().change_scene_to_file(next_level)
 func _on_game_over() -> void:
 	Singleton.game_over()
 
