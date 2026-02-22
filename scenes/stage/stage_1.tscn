@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://bc3lw11646b6b"]
+
+[ext_resource type="Script" uid="uid://cwsy04dxgw0eg" path="res://scripts/stage.gd" id="1_46vq0"]
+[ext_resource type="Texture2D" uid="uid://bmbuyf0misfxl" path="res://assets/Map_Stage/Stage 1 - Classroom.png" id="2_wvdeo"]
+[ext_resource type="Script" uid="uid://c3xo1jdn6ecwp" path="res://scripts/placementarea.gd" id="3_vq7r3"]
+[ext_resource type="PackedScene" uid="uid://88g8ccg12gvn" path="res://scenes/harvester/harvester.tscn" id="5_wvdeo"]
+[ext_resource type="PackedScene" uid="uid://dwhprl71esbko" path="res://scenes/UI/battle_ui.tscn" id="6_vq7r3"]
+
+[sub_resource type="Curve2D" id="Curve2D_mmctt"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 133, 371, 0, 0, 0, 0, 1030, 370)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_68yp5"]
+size = Vector2(114, 102)
+
+[node name="Stage1" type="Node2D" unique_id=830854486 node_paths=PackedStringArray("paths", "harvester", "battle_ui")]
+script = ExtResource("1_46vq0")
+paths = [NodePath("Path2D")]
+harvester = [NodePath("Harvester")]
+max_enemies = 5
+battle_ui = NodePath("CanvasLayer/BattleUI")
+next_level = "res://scenes/stage/stage_2.tscn"
+time_spawn = 4.0
+level = 1
+metadata/_custom_type_script = "uid://cwsy04dxgw0eg"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1114147051]
+z_index = -4
+position = Vector2(577.6667, 326)
+scale = Vector2(0.3009259, 0.3009259)
+texture = ExtResource("2_wvdeo")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1180252656]
+curve = SubResource("Curve2D_mmctt")
+
+[node name="PlacementArea" type="Area2D" parent="." unique_id=558441228]
+position = Vector2(261, 372)
+script = ExtResource("3_vq7r3")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea" unique_id=575685851]
+shape = SubResource("RectangleShape2D_68yp5")
+
+[node name="PlacementArea2" type="Area2D" parent="." unique_id=2037732943]
+position = Vector2(392, 372)
+script = ExtResource("3_vq7r3")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea2" unique_id=1029452794]
+shape = SubResource("RectangleShape2D_68yp5")
+
+[node name="PlacementArea3" type="Area2D" parent="." unique_id=796535726]
+position = Vector2(524, 372)
+script = ExtResource("3_vq7r3")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea3" unique_id=1626621187]
+shape = SubResource("RectangleShape2D_68yp5")
+
+[node name="PlacementArea4" type="Area2D" parent="." unique_id=1249275710]
+position = Vector2(649, 372)
+script = ExtResource("3_vq7r3")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea4" unique_id=1387045800]
+shape = SubResource("RectangleShape2D_68yp5")
+
+[node name="PlacementArea5" type="Area2D" parent="." unique_id=1668496466]
+position = Vector2(778, 372)
+script = ExtResource("3_vq7r3")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea5" unique_id=1108291641]
+shape = SubResource("RectangleShape2D_68yp5")
+
+[node name="PlacementArea6" type="Area2D" parent="." unique_id=1359464267]
+position = Vector2(906, 372)
+script = ExtResource("3_vq7r3")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea6" unique_id=1976569115]
+shape = SubResource("RectangleShape2D_68yp5")
+
+[node name="Harvester" parent="." unique_id=29287158 instance=ExtResource("5_wvdeo")]
+position = Vector2(1032, 369)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=368931815]
+layer = 0
+
+[node name="BattleUI" parent="CanvasLayer" unique_id=168384880 instance=ExtResource("6_vq7r3")]

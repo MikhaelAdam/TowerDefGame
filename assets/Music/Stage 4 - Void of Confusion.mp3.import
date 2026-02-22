@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://capdrcdu7cgu7"
+path="res://.godot/imported/Stage 4 - Void of Confusion.mp3-54a95167170caf4951e4df3af4fff87e.mp3str"
+
+[deps]
+
+source_file="res://assets/Music/Stage 4 - Void of Confusion.mp3"
+dest_files=["res://.godot/imported/Stage 4 - Void of Confusion.mp3-54a95167170caf4951e4df3af4fff87e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
