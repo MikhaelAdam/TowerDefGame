@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://b8a7cp15qt0v"]
 
-[ext_resource type="Texture2D" uid="uid://c5fr00dxs23sa" path="res://assets/image/mc/head.png" id="1_47i2e"]
-[ext_resource type="Texture2D" uid="uid://vw7fqk2wtrq8" path="res://assets/image/mc/hair.png" id="2_v5oty"]
-[ext_resource type="Texture2D" uid="uid://d0wngsd4eoiv6" path="res://assets/image/mc/leg1.png" id="3_n8hx5"]
-[ext_resource type="Texture2D" uid="uid://c7r1awm8w0wp3" path="res://assets/image/mc/leg2.png" id="4_k6trm"]
-[ext_resource type="Texture2D" uid="uid://c3xsng2whnnq1" path="res://assets/image/mc/feet.png" id="5_7jf2l"]
-[ext_resource type="Texture2D" uid="uid://bi4k5l761jdx1" path="res://assets/image/mc/torso.png" id="6_pk3ak"]
-[ext_resource type="Texture2D" uid="uid://blde7ifmf07yu" path="res://assets/image/mc/hand.png" id="7_a5qc8"]
-[ext_resource type="Texture2D" uid="uid://brudwldat133m" path="res://assets/image/mc/arm.png" id="8_v53ca"]
-[ext_resource type="Texture2D" uid="uid://djqol45qenbup" path="res://assets/image/mc/hands.png" id="9_8h1j5"]
-[ext_resource type="Texture2D" uid="uid://cm7xiiyt21o2j" path="res://assets/image/mc/pistol.png" id="10_xf3wg"]
+[ext_resource type="Texture2D" uid="uid://eea25e46omjh" path="res://assets/image/police/head.png" id="1_47i2e"]
+[ext_resource type="Texture2D" uid="uid://b1vrkdwov6qi7" path="res://assets/image/police/hair.png" id="2_v5oty"]
+[ext_resource type="Texture2D" uid="uid://dlyvko0bxyotd" path="res://assets/image/police/thigh.png" id="3_n8hx5"]
+[ext_resource type="Texture2D" uid="uid://bxlj0xe27wepc" path="res://assets/image/police/leg.png" id="4_k6trm"]
+[ext_resource type="Texture2D" uid="uid://cyvb7fk10k7j" path="res://assets/image/police/feet.png" id="5_7jf2l"]
+[ext_resource type="Texture2D" uid="uid://b24ps0exb1iwk" path="res://assets/image/police/torso.png" id="6_pk3ak"]
+[ext_resource type="Texture2D" uid="uid://cyq27a3o5ra10" path="res://assets/image/police/shoulder.png" id="7_47i2e"]
+[ext_resource type="Texture2D" uid="uid://cx7kau2dvmvyg" path="res://assets/image/police/forearm.png" id="8_v53ca"]
+[ext_resource type="Texture2D" uid="uid://coerge0pwtkqg" path="res://assets/image/police/hand.png" id="9_8h1j5"]
+[ext_resource type="Texture2D" uid="uid://b5xe7wvqvmwxq" path="res://assets/image/police/pistol.png" id="10_47i2e"]
 
 [node name="Police" type="Node2D" unique_id=1496343394]
 
@@ -70,8 +70,9 @@ offset = Vector2(17, -143)
 z_index = -1
 position = Vector2(-52, -294)
 rotation = 3.1415927
-texture = ExtResource("7_a5qc8")
+texture = ExtResource("7_47i2e")
 offset = Vector2(95, -7)
+flip_h = true
 
 [node name="Arm" type="Sprite2D" parent="CanvasGroup/Torso/Hand2" unique_id=1317832609]
 z_index = -1
@@ -89,12 +90,13 @@ flip_v = true
 z_index = 1
 position = Vector2(32.534485, 38.26158)
 rotation = 2.9216812
-texture = ExtResource("10_xf3wg")
+texture = ExtResource("10_47i2e")
 
 [node name="Hand" type="Sprite2D" parent="CanvasGroup/Torso" unique_id=235921619]
 position = Vector2(99, -287)
-texture = ExtResource("7_a5qc8")
+texture = ExtResource("7_47i2e")
 offset = Vector2(95, -7)
+flip_h = true
 
 [node name="Arm" type="Sprite2D" parent="CanvasGroup/Torso/Hand" unique_id=1054727359]
 position = Vector2(204, -3)

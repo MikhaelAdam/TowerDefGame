@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://plfk6xkkulty"]
+
+[ext_resource type="Script" uid="uid://dho076bo5f24g" path="res://scenes/UI/game_over.gd" id="1_njkqv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vop4n"]
+
+[node name="GameOver" type="Control" unique_id=1736911985]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_njkqv")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1933375629]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1799910789]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1893886562]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 62
+bbcode_enabled = true
+text = "Game [color=red]Over"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/VBoxContainer" unique_id=337557488]
+layout_mode = 2
+theme_override_constants/separation = 212
+theme_override_styles/separator = SubResource("StyleBoxEmpty_vop4n")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=911438453]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Return" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=32980088]
+layout_mode = 2
+text = "Return to Menu"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer" unique_id=1526786680]
+layout_mode = 2
+text = "Quit Game"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

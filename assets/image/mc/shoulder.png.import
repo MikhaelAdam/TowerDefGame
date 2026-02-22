@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brudwldat133m"
-path="res://.godot/imported/arm.png-ee2ca46c48b3fce0ab83f5ee99cc45d0.ctex"
+uid="uid://rl1hkp1yyxq5"
+path="res://.godot/imported/shoulder.png-10f5bed1d3101fe6a28dd698693e6ce1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/image/mc/arm.png"
-dest_files=["res://.godot/imported/arm.png-ee2ca46c48b3fce0ab83f5ee99cc45d0.ctex"]
+source_file="res://assets/image/mc/shoulder.png"
+dest_files=["res://.godot/imported/shoulder.png-10f5bed1d3101fe6a28dd698693e6ce1.ctex"]
 
 [params]
 

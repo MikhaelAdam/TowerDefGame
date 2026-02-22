@@ -6,10 +6,11 @@ var health: int = 100 : set = _set_health, get = _get_health
 const DEFENDER_POLICE = preload("uid://d3m1xymt61pi2")
 const DEFENDER_BAD_GIRL = preload("uid://7cf2jsklxgau")
 const DEFENDER_ALICE = preload("uid://cag1qy4k6ixe8")
+const DEFENDER_MC = preload("uid://kv5p4ofb0bh")
 
 const ENEMY_BASIC = preload("uid://b2hhnols2lwf4")
 
-var defender_type: int = 2
+var defender_type: int = -1
 var has_spawn: Dictionary[int , bool] = {
 	0 : false,
 	1 : false,
@@ -29,7 +30,10 @@ func add_defender(pos: Vector2):
 			def = DEFENDER_BAD_GIRL.instantiate()
 		2:
 			def = DEFENDER_ALICE.instantiate()
-	if def and has_spawn[defender_type] == false:
+		3:
+			def = DEFENDER_MC.instantiate()
+			
+	if def and has_spawn[defender_type] == false and defender_type != -1:
 		def.global_position = pos
 		current_stage.add_child(def)
 		has_spawn[defender_type] = true
