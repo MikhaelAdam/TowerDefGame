@@ -1,6 +1,8 @@
 extends Node2D
 class_name Stage
 
+signal stage_completed
+
 @export var paths: Array[Path2D]
 @export var harvester: Array[Harvester]
 @export var max_enemies: int 
@@ -60,6 +62,7 @@ func spawn_emeny(path: Path2D) -> void:
 	else:
 		for pt in paths:
 			if pt.get_child_count() == 0:
+				stage_completed.emit()
 				get_tree().change_scene_to_file(next_level)
 func _on_game_over() -> void:
 	Singleton.game_over()
