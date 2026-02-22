@@ -1,11 +1,11 @@
-# {Place Holder Game}
-Title : (placeholder)
+# {Purgatory}
+Title : (Purgatory)
 
 Main Character(s) : 
--Lisa - Melee - Critical hit
--Policeman - Ranged - Critical shot
--Band girl - Supporter - Encore
--Alice (temp name) - EX - Star fall
+-Lisa - Brawler
+-Steve - Policeman
+-Marika - Band Girl
+-Ami - Mysterious Girl
 
-Genre : tower defence and turn base, rpg
+Genre : Tower Defence
 Synopsis : placeholder
