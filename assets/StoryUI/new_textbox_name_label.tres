@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://7kpx8hvj47ux"]
+
+[ext_resource type="Texture2D" uid="uid://djdhhqx8o1obn" path="res://assets/StoryUI/NameLabel.png" id="1_7j2n6"]
+
+[resource]
+content_margin_left = 30.0
+texture = ExtResource("1_7j2n6")

@@ -21,7 +21,89 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+<<<<<<< Updated upstream
 Singleton="*uid://c3jk2ag75sjbi"
+=======
+Dialogic="*uid://ds2q0uclmolvu"
+
+[dialogic]
+
+directories/dch_directory={
+"Band Girl": "res://assets/character/Bandgirl/Band Girl.dch",
+"Entity": "res://assets/character/Entity/Entity.dch",
+"MainCharacter": "res://assets/character/MainCharacter/MainCharacter.dch",
+"Policeman/Police": "res://assets/character/Policeman/Police.dch",
+"Strange Creature": "res://assets/character/Auxilary/Strange Creature.dch",
+"UCP2": "res://assets/character/Auxilary/UCP2.dch",
+"caster": "res://assets/character/Auxilary/caster.dch",
+"placehodler": "res://assets/character/Auxilary/placehodler.dch",
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch",
+"unknowCharacterPlaceholder": "res://assets/character/Auxilary/unknowCharacterPlaceholder.dch"
+}
+directories/dtl_directory={
+"briefing1": "res://timeline/briefing1.dtl",
+"briefing2": "res://timeline/briefing2.dtl",
+"briefing3": "res://timeline/briefing3.dtl",
+"briefing4": "res://timeline/briefing4.dtl",
+"briefing5": "res://timeline/briefing5.dtl",
+"ending": "res://timeline/ending.dtl",
+"intro": "res://timeline/intro.dtl",
+"intro2": "res://assets/character/MainCharacter/intro2.dtl",
+"intro3": "res://timeline/intro3.dtl",
+"intro4": "res://timeline/intro4.dtl",
+"intro5": "res://timeline/intro5.dtl",
+"test": "res://timeline/test.dtl",
+"timeline/intro2": "res://timeline/intro2.dtl"
+}
+layout/style_directory={
+"duplicateStyle": "res://addons/style/duplicateStyle.tres"
+}
+layout/style_list=["res://addons/style/duplicateStyle.tres"]
+layout/default_style=""
+glossary/default_case_sensitive=true
+extensions_folder="res://addons/dialogic_additions"
+text/letter_speed=0.05
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
+variables={}
+text/autoskip_time_per_event=0.0
+text/input_action="dialogic_default_action"
+text/autocolor_names=true
+history/simple_history_enabled=false
+history/full_history_enabled=false
+history/visited_event_history_enabled=false
+text/autoadvance_fixed_delay=0.5
+text/autoadvance_per_word_delay=0.4
+>>>>>>> Stashed changes
 
 [display]
 
@@ -33,10 +115,26 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="BrGJ2026"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
+
 [global_group]
 
 enemy=""
 defender=""
+
+[input]
+
+dialogic_default_action={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":4194309,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":88,"physical_keycode":0,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+]
+}
 
 [layer_names]
 

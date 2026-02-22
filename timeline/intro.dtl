@@ -1,0 +1,44 @@
+[background arg="res://assets/story/transition/transition_1.jpg" fade="1.0" wait="true"]
+[wait time="1.0" skippable="true"]
+[background arg="res://assets/story/intro/1.png" fade="0.5" wait="true"]
+[wait time="2.0" skippable="true"]
+[background arg="res://assets/story/transition/transition_1.jpg" fade="0.5" wait="true"]
+[background arg="res://assets/story/intro/2.png" fade="0.5" transition="Simple Fade" wait="true"]
+[wait time="2.0" skippable="true"]
+[background arg="res://assets/story/transition/transition_2.png" fade="1.0" transition="Simple Fade" wait="true"]
+[wait time="1.0"]
+[background arg="res://assets/story/Places/Class normal.png" fade="3.0" wait="true"]
+placehodler: Ugh... feels like i just chugged 10 coffees in one minute.
+join MainCharacter left [animation="Fade In" length="2.0" wait="true"]
+MainCharacter: Where in the world am i?
+MainCharacter: A classroom?
+[clear time="1.0" step="false" music="false" background="false" positions="false" style="false"]
+[background arg="res://assets/story/Places/Class left.png" fade="2.0" wait="true"]
+[background arg="res://assets/story/Places/Class right.png" fade="2.0" wait="true"]
+[background arg="res://assets/story/Places/Class normal.png" fade="2.0" wait="true"]
+join MainCharacter left [animation="Instant In" length="0.0"]
+MainCharacter: what the-
+MainCharacter: Is that a void?
+leave MainCharacter [animation="Instant In" length="0.0"]
+caster: Player has entered the stage
+join MainCharacter left [animation="Instant In" length="0.0"]
+MainCharacter: Who’s there!?
+leave MainCharacter [animation="Instant In" length="0.0"]
+caster: Beginning the game in 3…
+join MainCharacter left [animation="Instant In" length="0.0"]
+MainCharacter: What’s going on!?
+leave MainCharacter [animation="Instant In" length="0.0"]
+caster: 2…
+join MainCharacter left [animation="Instant In" length="0.0"]
+MainCharacter: Is that a glowing cube???
+leave MainCharacter [animation="Instant In" length="0.0"]
+[background arg="res://assets/story/transition/transition_2.png" fade="0.0"]
+caster: 1…
+caster: Game started.
+caster: Do not let the creatures touch the cube.
+caster: Good luck.
+audio -
+[background arg="res://assets/story/Places/Class normal.png" fade="0.0"]
+"Strange Creature": RAHHH!
+join MainCharacter left [animation="Instant In" length="0.0"]
+MainCharacter: What the hell!?

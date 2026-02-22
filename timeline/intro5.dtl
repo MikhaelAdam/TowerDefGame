@@ -1,0 +1,20 @@
+[background fade="0.0"]
+join Entity left [animation="Instant In" length="0.0"]
+Entity: That was quite fun, wasn't it?
+leave Entity [animation="Instant In" length="0.0"]
+join MainCharacter left [animation="Instant In" length="0.0"]
+MainCharacter: I can’t believe I'm saying this, but yeah.
+leave MainCharacter [animation="Instant In" length="0.0"]
+join "Band Girl" left [animation="Instant In" length="0.0"]
+"Band Girl": But performing consecutively like this is quite tiring
+leave "Band Girl" [animation="Instant In" length="0.0"]
+join Policeman/Police left [animation="Instant In" length="0.0"]
+Policeman/Police: Then let’s take a rest.
+Policeman/Police: The next room seem to be… “normal”
+leave Policeman/Police [animation="Instant In" length="0.0"]
+audio -
+[background fade="2.0" wait="true"]
+join MainCharacter left [animation="Instant In" length="0.0"]
+MainCharacter: Whoa, there’s even beds here!
+leave MainCharacter [animation="Instant In" length="0.0"]
+[signal arg="done"]

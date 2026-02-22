@@ -1,0 +1,5 @@
+join MainCharacter left [animation="Fade In"]
+MainCharacter: Seems like the creature doesn’t attack me…
+MainCharacter: Rather, it doesn’t seem to care at all.
+MainCharacter: I just need to beat them up right?
+[signal arg="done"]
