@@ -1,0 +1,9 @@
+join Policeman/Police left [animation="Fade In" wait="true"]
+leave Policeman/Police [animation="Fade Out" wait="true"]
+join "Band Girl" left [animation="Fade In" wait="true"]
+leave "Band Girl" [animation="Fade Out" wait="true"]
+join Entity left [animation="Fade In" wait="true"]
+leave Entity [animation="Fade Out" wait="true"]
+join MainCharacter left [animation="Fade In" wait="true"]
+leave MainCharacter [animation="Fade Out" wait="true"]
+join  center
