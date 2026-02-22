@@ -8,7 +8,11 @@ extends DialogicEvent
 ### Settings
 
 ## Content of the comment.
+<<<<<<< Updated upstream
 var text := ""
+=======
+@export var text := ""
+>>>>>>> Stashed changes
 
 
 #region EXECUTE
@@ -27,8 +31,14 @@ func _execute() -> void:
 func _init() -> void:
 	event_name = "Comment"
 	event_description = "Has no effect on gameplay, but can help organize your timeline."
+<<<<<<< Updated upstream
 	set_default_color('Color9')
 	event_category = "Helpers"
+=======
+	event_sorting_index = 10
+	set_default_color('Color9')
+	event_category = "Other"
+>>>>>>> Stashed changes
 	event_sorting_index = 0
 
 #endregion

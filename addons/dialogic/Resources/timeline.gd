@@ -78,6 +78,15 @@ func get_index_from_text_line(text:String, line) -> int:
 	process()
 	return text_lines_indexed[line]
 
+<<<<<<< Updated upstream
+=======
+## Returns the line index of the previously loaded text corresponding to the given event index.
+## For events that span multiple lines, it might be random which line is returned.
+func get_text_line_from_index(index:int) -> int:
+	var line: Variant = text_lines_indexed.find_key(index)
+	return line if typeof(line) is int else -1
+
+>>>>>>> Stashed changes
 
 ## Method that loads all the event resources from the strings, if it wasn't done before
 func process() -> void:

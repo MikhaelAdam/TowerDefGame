@@ -9,7 +9,11 @@ enum Actions {CLEAR, PAUSE, RESUME}
 ### Settings
 
 ## The type of action: Clear, Pause or Resume
+<<<<<<< Updated upstream
 var action := Actions.PAUSE
+=======
+@export var action := Actions.PAUSE
+>>>>>>> Stashed changes
 
 
 #region EXECUTION

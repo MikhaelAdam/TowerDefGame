@@ -143,10 +143,17 @@ func build_event_editor() -> void:
 #region STATE
 ####################################################################################################
 
+<<<<<<< Updated upstream
 func clear_game_state(clear_flag:=Dialogic.ClearFlags.FULL_CLEAR) -> void:
 	pass
 
 func load_game_state(load_flag:=LoadFlags.FULL_LOAD) -> void:
+=======
+func _clear_state(clear_flag:=Dialogic.ClearFlags.FULL_CLEAR) -> void:
+	pass
+
+func _load_state(load_flag:=LoadFlags.FULL_LOAD) -> void:
+>>>>>>> Stashed changes
 	pass
 
 #endregion

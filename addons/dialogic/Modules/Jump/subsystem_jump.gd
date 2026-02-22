@@ -3,6 +3,10 @@ extends DialogicSubsystem
 ## Subsystem that holds methods for jumping to specific labels, or return to the previous jump.
 
 
+<<<<<<< Updated upstream
+=======
+#region SIGNALS
+>>>>>>> Stashed changes
 @warning_ignore("unused_signal") # this is emitted from the jump event
 ## Emitted when a jump event switches from one timeline to another. Gives a dictionary witht the keys:
 ## [br]
@@ -38,10 +42,20 @@ signal returned_from_jump(info:Dictionary)
 ## `display_name_orig` | [type String]           | The untranslated display name. [br]
 ## `timeline`          | [type String]           | The identifier of the timeline we are in. [br]
 signal passed_label(info:Dictionary)
+<<<<<<< Updated upstream
+=======
+#endregion
+
+@export_group("State")
+@export var jump_stack := []
+@export var last_label := {}
+
+>>>>>>> Stashed changes
 
 #region STATE
 ####################################################################################################
 
+<<<<<<< Updated upstream
 func clear_game_state(_clear_flag:=DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
 	dialogic.current_state_info['jump_stack'] = []
 	dialogic.current_state_info.erase("last_label")
@@ -50,6 +64,15 @@ func clear_game_state(_clear_flag:=DialogicGameHandler.ClearFlags.FULL_CLEAR) ->
 func load_game_state(_load_flag:=LoadFlags.FULL_LOAD) -> void:
 	if not 'jump_stack' in dialogic.current_state_info:
 		dialogic.current_state_info['jump_stack'] = []
+=======
+func _clear_state(_clear_flag:=DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+	jump_stack = []
+	last_label = {}
+
+
+func _load_state(_load_flag:=LoadFlags.FULL_LOAD) -> void:
+	pass
+>>>>>>> Stashed changes
 
 #endregion
 
@@ -79,18 +102,30 @@ func jump_to_label(label:String) -> void:
 
 
 func push_to_jump_stack() -> void:
+<<<<<<< Updated upstream
 	dialogic.current_state_info['jump_stack'].push_back({'timeline':dialogic.current_timeline, 'index':dialogic.current_event_idx, 'label':dialogic.current_timeline_events[dialogic.current_event_idx].label_name})
+=======
+	jump_stack.push_back({'timeline':dialogic.current_timeline, 'index':dialogic.current_event_idx, 'label':dialogic.current_timeline_events[dialogic.current_event_idx].label_name})
+>>>>>>> Stashed changes
 
 
 func resume_from_last_jump() -> void:
 	var sub_timeline: DialogicTimeline = dialogic.current_timeline
+<<<<<<< Updated upstream
 	var stack_info: Dictionary = dialogic.current_state_info['jump_stack'].pop_back()
+=======
+	var stack_info: Dictionary = jump_stack.pop_back()
+>>>>>>> Stashed changes
 	dialogic.start_timeline(stack_info.timeline, stack_info.index+1)
 	returned_from_jump.emit({'sub_timeline':sub_timeline, 'label':stack_info.label})
 
 
 func is_jump_stack_empty() -> bool:
+<<<<<<< Updated upstream
 	return len(dialogic.current_state_info['jump_stack']) < 1
+=======
+	return len(jump_stack) < 1
+>>>>>>> Stashed changes
 
 #endregion
 
@@ -103,21 +138,33 @@ func _ready() -> void:
 
 
 func _on_passed_label(info:Dictionary) -> void:
+<<<<<<< Updated upstream
 	dialogic.current_state_info["last_label"] = info
+=======
+	last_label = info
+>>>>>>> Stashed changes
 
 
 ## Returns the identifier name of the last passed label
 func get_last_label_identifier() -> String:
+<<<<<<< Updated upstream
 	if not dialogic.current_state_info.has("last_label"):
 		return ""
 
 	return dialogic.current_state_info["last_label"].identifier
+=======
+	return last_label.get("identifier", "")
+>>>>>>> Stashed changes
 
 
 ## Returns the display name of the last passed label (translated if translation are enabled)
 func get_last_label_name() -> String:
+<<<<<<< Updated upstream
 	if not dialogic.current_state_info.has("last_label"):
 		return ""
 
 	return dialogic.current_state_info["last_label"].display_name
+=======
+	return last_label.get("display_name", "")
+>>>>>>> Stashed changes
 #endregion

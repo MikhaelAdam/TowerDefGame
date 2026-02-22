@@ -1,0 +1,42 @@
+[background fade="0.0"]
+caster: The game has ended.
+caster: Thank you for playing.
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: And that’s game!
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: huff Alright!
+leave Marika [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Done and dusted.
+leave Steve [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: …
+Ami: I never thought I could have this much fun.
+leave Ami [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Oh, we’re disappearing.
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Then it means it’s time to go?
+leave Steve [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Ami!
+leave Marika [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: Marika?
+leave Ami [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: I-i had fun!
+leave Marika [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: Marika…
+leave Ami [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Thank you, Ami.
+leave Marika [animation="Instant In" length="0.0"]
+[background fade="0.0"]
+Ami: Then let’s play again.
+[background arg="res://assets/story/transition/transition_2.png" fade="2.0" wait="true"]
+Ami: one day.
+[signal arg="ending"]

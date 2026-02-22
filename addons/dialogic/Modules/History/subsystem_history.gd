@@ -10,7 +10,11 @@ signal close_requested
 ## Used for the history display
 var simple_history_enabled := false
 var simple_history_save := false
+<<<<<<< Updated upstream
 var simple_history_content : Array[Dictionary] = []
+=======
+@export var simple_history_content : Array[Dictionary] = []
+>>>>>>> Stashed changes
 signal simple_history_changed
 
 ## Whether to keep a history of every Dialogic event encountered.
@@ -19,7 +23,11 @@ var full_event_history_save := false
 
 ## The full history of all Dialogic events encountered.
 ## Requires [member full_event_history_enabled] to be true.
+<<<<<<< Updated upstream
 var full_event_history_content: Array[DialogicEvent] = []
+=======
+@export var full_event_history_content: Array[String] = []
+>>>>>>> Stashed changes
 
 ## Emitted if a new event has been inserted into the full event history.
 signal full_event_history_changed
@@ -98,11 +106,16 @@ func _on_save(info: Dictionary) -> void:
 		save_visited_history()
 
 
+<<<<<<< Updated upstream
 func post_install() -> void:
+=======
+func _post_install() -> void:
+>>>>>>> Stashed changes
 	save_visited_history_on_autosave = ProjectSettings.get_setting('dialogic/history/save_on_autosave', save_visited_history_on_autosave)
 	save_visited_history_on_save = ProjectSettings.get_setting('dialogic/history/save_on_save', save_visited_history_on_save)
 
 
+<<<<<<< Updated upstream
 func clear_game_state(clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
 	if clear_flag == DialogicGameHandler.ClearFlags.FULL_CLEAR:
 		if simple_history_save:
@@ -142,6 +155,18 @@ func save_game_state() -> void:
 			dialogic.current_state_info["history_full"].append(event.to_text())
 	else:
 		dialogic.current_state_info.erase("history_full")
+=======
+func _clear_state(clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+	if clear_flag != DialogicGameHandler.ClearFlags.FULL_CLEAR:
+		return
+
+	simple_history_content = []
+	full_event_history_content = []
+
+
+func _load_state(_load_flag := LoadFlags.FULL_LOAD) -> void:
+	pass
+>>>>>>> Stashed changes
 
 
 func open_history() -> void:
@@ -158,9 +183,15 @@ func close_history() -> void:
 ####################################################################################################
 
 func store_simple_history_entry(text:String, event_type:String, extra_info := {}) -> void:
+<<<<<<< Updated upstream
 	if !simple_history_enabled: return
 	extra_info['text'] = text
 	extra_info['event_type'] = event_type
+=======
+	if not simple_history_enabled: return
+	extra_info["text"] = text
+	extra_info["event_type"] = event_type
+>>>>>>> Stashed changes
 	simple_history_content.append(extra_info)
 	simple_history_changed.emit()
 
@@ -176,8 +207,13 @@ func get_simple_history() -> Array:
 
 ## Called on each event.
 func store_full_event(event: DialogicEvent) -> void:
+<<<<<<< Updated upstream
 	if !full_event_history_enabled: return
 	full_event_history_content.append(event)
+=======
+	if not full_event_history_enabled: return
+	full_event_history_content.append(event.to_text())
+>>>>>>> Stashed changes
 	full_event_history_changed.emit()
 
 
@@ -206,7 +242,11 @@ func _get_event_key(event_index: int, timeline_path: String) -> String:
 
 ## Called if an event is marked as visited.
 func mark_event_as_visited(event_index := dialogic.current_event_idx, timeline := dialogic.current_timeline) -> void:
+<<<<<<< Updated upstream
 	if !visited_event_history_enabled:
+=======
+	if not visited_event_history_enabled:
+>>>>>>> Stashed changes
 		return
 
 	var event_key := _get_event_key(event_index, timeline.resource_path)
@@ -216,7 +256,11 @@ func mark_event_as_visited(event_index := dialogic.current_event_idx, timeline :
 
 ## Called on each event, but we filter for Text events.
 func _check_seen(event: DialogicEvent) -> void:
+<<<<<<< Updated upstream
 	if !visited_event_history_enabled:
+=======
+	if not visited_event_history_enabled:
+>>>>>>> Stashed changes
 		return
 
 	# At this point, we only care about Text events.

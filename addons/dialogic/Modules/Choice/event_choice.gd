@@ -9,6 +9,7 @@ enum ElseActions {HIDE=0, DISABLE=1, DEFAULT=2}
 
 ### Settings
 ## The text that is displayed on the choice button.
+<<<<<<< Updated upstream
 var text := ""
 ## If not empty this condition will determine if this choice is active.
 var condition := ""
@@ -20,6 +21,19 @@ var disabled_text := ""
 ## A dictionary that can be filled with arbitrary information
 ## This can then be interpreted by a custom choice layer
 var extra_data := {}
+=======
+@export var text := ""
+## If not empty this condition will determine if this choice is active.
+@export var condition := ""
+## Determines what happens if  [condition] is false. Default will use the action set in the settings.
+@export var else_action := ElseActions.DEFAULT
+## The text that is displayed if [condition] is false and [else_action] is Disable.
+## If empty [text] will be used for disabled button as well.
+@export var disabled_text := ""
+## A dictionary that can be filled with arbitrary information
+## This can then be interpreted by a custom choice layer
+@export var extra_data := {}
+>>>>>>> Stashed changes
 
 
 ## UI helper

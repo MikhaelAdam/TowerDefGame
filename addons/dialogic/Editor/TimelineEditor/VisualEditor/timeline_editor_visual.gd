@@ -37,7 +37,10 @@ var drag_allowed := false
 func something_changed() -> void:
 	timeline_editor.current_resource_state = DialogicEditor.ResourceStates.UNSAVED
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 func save_timeline() -> void:
 	if !is_inside_tree():
 		return
@@ -208,6 +211,7 @@ func load_event_buttons() -> void:
 
 	# Clear previous event buttons
 	for child in %RightSidebar.get_child(0).get_children():
+<<<<<<< Updated upstream
 
 		if child is FlowContainer:
 
@@ -215,15 +219,28 @@ func load_event_buttons() -> void:
 				button.queue_free()
 
 
+=======
+		if child is FlowContainer:
+			for button in child.get_children():
+				button.queue_free()
+
+>>>>>>> Stashed changes
 	for child in %RightSidebar.get_child(0).get_children():
 		child.get_parent().remove_child(child)
 		child.queue_free()
 
 	# Event buttons
+<<<<<<< Updated upstream
 	var button_scene := load("res://addons/dialogic/Editor/TimelineEditor/VisualEditor/AddEventButton.tscn")
 
 	var scripts := DialogicResourceUtil.get_event_cache()
 	var hidden_buttons: Array = DialogicUtil.get_editor_setting('hidden_event_buttons', [])
+=======
+	var button_scene := load("uid://depcrpeh3f4rv")
+
+	var scripts := DialogicResourceUtil.get_event_cache()
+	var hidden_buttons: Array = DialogicUtil.get_editor_setting("hidden_event_buttons", DialogicUtil.SETTING_HIDDEN_BUTTONS_DEFAULT)
+>>>>>>> Stashed changes
 	var sections := {}
 
 	for event_script in scripts:
@@ -251,7 +268,11 @@ func load_event_buttons() -> void:
 
 		button.button_up.connect(_add_event_button_pressed.bind(event_resource))
 
+<<<<<<< Updated upstream
 		if !event_resource.event_category in sections:
+=======
+		if not event_resource.event_category in sections:
+>>>>>>> Stashed changes
 			var section := VBoxContainer.new()
 			section.name = event_resource.event_category
 
@@ -278,6 +299,7 @@ func load_event_buttons() -> void:
 			sections[event_resource.event_category].move_child(button, button.get_index()-1)
 
 	# Sort event sections
+<<<<<<< Updated upstream
 	var sections_order: Array = DialogicUtil.get_editor_setting('event_section_order',
 			['Main', 'Flow', 'Logic', 'Audio', 'Visual','Other', 'Helper'])
 
@@ -285,6 +307,16 @@ func load_event_buttons() -> void:
 	for section_name in sections_order:
 		if %RightSidebar.get_child(0).has_node(section_name):
 			%RightSidebar.get_child(0).move_child(%RightSidebar.get_child(0).get_node(section_name), 0)
+=======
+	var sections_order: Array = DialogicUtil.get_editor_setting("event_section_order",
+			DialogicUtil.SETTING_BUTTON_SECTION_ORDER)
+
+	var i := 0
+	for section_name in sections_order:
+		if %RightSidebar.get_child(0).has_node(section_name):
+			%RightSidebar.get_child(0).move_child(%RightSidebar.get_child(0).get_node(section_name), i)
+			i += 1
+>>>>>>> Stashed changes
 
 	# Resize RightSidebar
 	%RightSidebar.custom_minimum_size.x = 50 * DialogicUtil.get_editor_scale()
@@ -1019,6 +1051,10 @@ func _on_event_popup_menu_id_pressed(id:int) -> void:
 	elif id == 3:
 		EditorInterface.set_main_screen_editor('Script')
 		EditorInterface.edit_script(item.resource.get_script(), 1, 1)
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 	elif id == 4 or id == 5:
 		if id == 4:
 			offset_blocks_by_index(selected_items, -1)

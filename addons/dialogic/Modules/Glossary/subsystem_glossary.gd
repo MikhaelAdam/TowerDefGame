@@ -16,7 +16,11 @@ const SETTING_DEFAULT_COLOR := 'dialogic/glossary/default_color'
 #region STATE
 ####################################################################################################
 
+<<<<<<< Updated upstream
 func clear_game_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+=======
+func _clear_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+>>>>>>> Stashed changes
 	glossaries = []
 
 	for path: String in ProjectSettings.get_setting('dialogic/glossary/glossary_files', []):

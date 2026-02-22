@@ -1,0 +1,159 @@
+[background arg="res://assets/story/Places/Hallway.png" fade="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+UCP1: What the hell is that thing?
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: I have no idea either.
+leave Lisa [animation="Instant In" length="0.0"]
+caster: Stage completed. Cube acquired.
+join Steve left [animation="Instant In" length="0.0"]
+UCP1: *sigh*
+UCP1: I’m sorry for pointing a gun at you
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: No worries, it’s fine
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: My name is Steve
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Right, Mr.Steve.
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Just Steve is fine.
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Okay, Steve. I assume you’re a cop? I mean, with the handgun and all…
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Yeah, I suddenly woke up here after i…
+Steve: ...
+Steve: Weird, I can't remember anything.
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: So we’re on the same boat huh?
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Hm, no matter. We need to find a way out here.
+Steve: Has that door always been there?
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Don’t think so.
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: I’ll check it out-
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Wait! Shouldn’t we go together? Just in case something happens?
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: I can’t really let a civilian walk into danger, but-
+Steve: I guess it is the better option.
+Steve: Stay close then.
+leave Steve [animation="Instant In" length="0.0"]
+audio "res://assets/sfx/walking.mp3"
+[background arg="res://assets/story/transition/transition_2.png" fade="4.0" wait="true"]
+audio "res://assets/sfx/fall.mp3"
+Placeholder: WHOA!!!
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Ughh…
+leave Lisa [animation="Instant In" length="0.0"]
+join  center [animation="Instant In" length="0.0"]
+UCP1: Where did they fall from?
+leave 
+join  center [animation="Instant In" length="0.0"]
+UCP2: Maybe the sky, maybe from some other connected place, who knows?
+leave 
+[background arg="res://assets/story/Places/Hallway.png" fade="2.0" transition="Simple Fade" wait="true"]
+join  center [animation="Instant In" length="0.0"]
+UCP1: Oh she’s awake
+leave 
+join  center [animation="Instant In" length="0.0"]
+UCP2: Of course she will. Her fall is cushioned after all.
+leave 
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Wh-who are you?
+leave Lisa [animation="Instant In" length="0.0"]
+join  center [animation="Instant In" length="0.0"]
+UCP1: My name is-
+leave 
+join  center [animation="Instant In" length="0.0"]
+UCP2: Wait. Let me say it please? I always wanted to say it.
+leave 
+join  center [animation="Instant In" length="0.0"]
+UCP1: Mnh… A-alright?
+leave 
+join  center [animation="Instant In" length="0.0"]
+UCP2: Isn’t it more proper for you to introduce yourself first before asking?
+leave 
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: uhh- o-okay? My name is Lisa and this is Steve
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Fade In Up" length="1.0" wait="true"]
+Steve: What just happened…?
+leave Steve [animation="Instant In" length="0.0"]
+join  center [animation="Instant In" length="0.0"]
+UCP2: You just fell down from the sky.
+leave 
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Like- the sky, sky?
+leave Lisa [animation="Instant In" length="0.0"]
+join  center [animation="Instant In" length="0.0"]
+UCP2: Well, not really, it’s less confusing to just say it’s the sky.
+leave 
+join  center [animation="Instant In" length="0.0"]
+"Band Girl": Sorry, she’s kind of an oddball. My name is Maria and she’s-
+leave 
+join  center [animation="Instant In" length="0.0"]
+Entity: Ami. The name’s Ami.
+leave 
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Amy?
+leave Lisa [animation="Instant In" length="0.0"]
+join  center [animation="Instant In" length="0.0"]
+Entity: Non, Ami as in amicus
+leave 
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: R-right
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Sorry to interrupt, but where is this place?
+leave Steve [animation="Instant In" length="0.0"]
+join  center [animation="Instant In" length="0.0"]
+Entity: Seems like you’re like us.
+leave 
+join  center [animation="Instant In" length="0.0"]
+"Band Girl": What she meant is that we’re also trying to find our way.
+leave 
+join Steve left [animation="Instant In" length="0.0"]
+Steve: I see.
+leave Steve [animation="Instant In" length="0.0"]
+join  center [animation="Instant In" length="0.0"]
+Entity: The more the merrier, isn’t it?
+leave 
+join  center [animation="Instant In" length="0.0"]
+"Band Girl": I guess it would be better to stick together-
+leave 
+caster: Players have entered the stage
+join  center [animation="Instant In" length="0.0"]
+Entity: Oh my.
+leave 
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Not again…
+leave Lisa [animation="Instant In" length="0.0"]
+join  center [animation="Instant In" length="0.0"]
+"Band Girl": Seems like we have to perform again.
+leave 
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Perform?
+leave Steve [animation="Instant In" length="0.0"]
+"Strange Creature": RAHH!!!
+join Steve left [animation="Instant In" length="0.0"]
+Steve: I don’t think performing is appropriate right now!
+leave Steve [animation="Instant In" length="0.0"]
+join  center [animation="Instant In" length="0.0"]
+"Band Girl": I-i meant fighting- nevermind, i’ll cover you!
+leave 
+[clear time="1.0"]
+[background arg="res://assets/story/Places/Stage 3 - Void A.png" fade="2.0" wait="true"]
+[signal arg="done"]

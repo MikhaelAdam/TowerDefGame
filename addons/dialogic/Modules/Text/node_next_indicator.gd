@@ -44,7 +44,11 @@ var tween: Tween
 
 func _ready() -> void:
 	add_to_group('dialogic_next_indicator')
+<<<<<<< Updated upstream
 
+=======
+	gui_input.connect(_on_gui_input)
+>>>>>>> Stashed changes
 	# Creating TextureRect if missing
 	if not texture_rect:
 		var icon := TextureRect.new()
@@ -57,11 +61,22 @@ func _ready() -> void:
 		texture_rect = icon
 
 	texture_rect.texture = texture
+<<<<<<< Updated upstream
 	
+=======
+
+>>>>>>> Stashed changes
 	hide()
 	visibility_changed.connect(_on_visibility_changed)
 
 
+<<<<<<< Updated upstream
+=======
+func _on_gui_input(event: InputEvent) -> void:
+	DialogicUtil.autoload().Inputs.handle_node_gui_input(event)
+
+
+>>>>>>> Stashed changes
 func _on_visibility_changed() -> void:
 	if visible:
 		play_animation(animation, 1.0)

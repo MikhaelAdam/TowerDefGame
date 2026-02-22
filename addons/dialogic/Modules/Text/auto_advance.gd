@@ -75,12 +75,21 @@ func _init() -> void:
 	autoadvance_timer.timeout.connect(_on_autoadvance_timer_timeout)
 	toggled.connect(_on_toggled)
 
+<<<<<<< Updated upstream
 	enabled_forced = ProjectSettings.get_setting('dialogic/text/autoadvance_enabled', false)
 	fixed_delay = ProjectSettings.get_setting('dialogic/text/autoadvance_fixed_delay', 1)
 	per_word_delay = ProjectSettings.get_setting('dialogic/text/autoadvance_per_word_delay', 0)
 	per_character_delay = ProjectSettings.get_setting('dialogic/text/autoadvance_per_character_delay', 0.1)
 	ignored_characters_enabled = ProjectSettings.get_setting('dialogic/text/autoadvance_ignored_characters_enabled', true)
 	ignored_characters = ProjectSettings.get_setting('dialogic/text/autoadvance_ignored_characters', {})
+=======
+	enabled_forced = ProjectSettings.get_setting("dialogic/text/autoadvance_enabled", false)
+	fixed_delay = ProjectSettings.get_setting("dialogic/text/autoadvance_fixed_delay", 1)
+	per_word_delay = ProjectSettings.get_setting("dialogic/text/autoadvance_per_word_delay", 0)
+	per_character_delay = ProjectSettings.get_setting("dialogic/text/autoadvance_per_character_delay", 0.1)
+	ignored_characters_enabled = ProjectSettings.get_setting("dialogic/text/autoadvance_ignored_characters_enabled", true)
+	ignored_characters = ProjectSettings.get_setting("dialogic/text/autoadvance_ignored_characters", {})
+>>>>>>> Stashed changes
 
 #region AUTOADVANCE INTERNALS
 
@@ -88,7 +97,11 @@ func start() -> void:
 	if not is_enabled():
 		return
 
+<<<<<<< Updated upstream
 	var parsed_text: String = DialogicUtil.autoload().current_state_info['text_parsed']
+=======
+	var parsed_text: String = DialogicUtil.autoload().Text.dialog_text_parsed
+>>>>>>> Stashed changes
 	var delay := _calculate_autoadvance_delay(parsed_text)
 
 	await DialogicUtil.autoload().get_tree().process_frame
@@ -125,7 +138,11 @@ func _calculate_autoadvance_delay(text: String = "") -> float:
 		delay = max(0, delay)
 
 	# Wait for the voice clip (if longer than the current delay)
+<<<<<<< Updated upstream
 	if await_playing_voice and DialogicUtil.autoload().has_subsystem('Voice') and DialogicUtil.autoload().Voice.is_running():
+=======
+	if await_playing_voice and DialogicUtil.autoload().has_subsystem("Voice") and DialogicUtil.autoload().Voice.is_running():
+>>>>>>> Stashed changes
 		delay = max(delay, DialogicUtil.autoload().Voice.get_remaining_time())
 
 	return delay
@@ -167,7 +184,11 @@ func _on_toggled(enabled: bool) -> void:
 	# we will initiate the auto-advance mode.
 	if (enabled and !is_advancing()
 	and DialogicUtil.autoload().current_state == DialogicGameHandler.States.IDLE
+<<<<<<< Updated upstream
 	and not DialogicUtil.autoload().current_state_info.get('text', '').is_empty()):
+=======
+	and not DialogicUtil.autoload().Text.dialog_text.is_empty()):
+>>>>>>> Stashed changes
 		start()
 
 	# If auto-advance is disabled and we are auto-advancing,

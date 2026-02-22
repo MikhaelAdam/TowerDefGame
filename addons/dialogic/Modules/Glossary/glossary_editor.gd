@@ -239,7 +239,11 @@ func _on_add_glossary_entry_pressed() -> void:
 	new_glossary[DialogicGlossary.NAME_PROPERTY] = new_name
 
 	if not current_glossary.try_add_entry(new_glossary):
+<<<<<<< Updated upstream
 		print_rich("[color=red]Failed adding '" + new_name + "', exists already.[/color]")
+=======
+		#print_rich("[color=red]Failed adding '" + new_name + "', exists already.[/color]")
+>>>>>>> Stashed changes
 		return
 
 	ResourceSaver.save(current_glossary)
@@ -363,7 +367,11 @@ func _on_entry_name_text_changed(new_name: String) -> void:
 		if not _check_entry_name(new_name, current_entry):
 			return
 
+<<<<<<< Updated upstream
 		print_rich("[color=green]Renaming entry '" + current_entry_name + "'' to '" + new_name + "'[/color]")
+=======
+		#print_rich("[color=green]Renaming entry '" + current_entry_name + "'' to '" + new_name + "'[/color]")
+>>>>>>> Stashed changes
 
 		_update_alias_entries(current_entry_name, new_name)
 

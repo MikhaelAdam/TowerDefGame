@@ -71,6 +71,10 @@ func use_float_mode() -> void:
 
 func use_int_mode() -> void:
 	update_suffix("")
+<<<<<<< Updated upstream
+=======
+	step = 1.0
+>>>>>>> Stashed changes
 	enforce_step = true
 	step = 1.0
 

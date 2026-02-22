@@ -18,7 +18,11 @@ enum VarValueType {
 ## Settings
 
 ## Name/Path of the variable that should be changed.
+<<<<<<< Updated upstream
 var name := "":
+=======
+@export var name := "":
+>>>>>>> Stashed changes
 	set(_value):
 		name = _value
 		if Engine.is_editor_hint() and not value:
@@ -33,7 +37,11 @@ var name := "":
 		update_editor_warning()
 
 ## The operation to perform.
+<<<<<<< Updated upstream
 var operation := Operations.SET:
+=======
+@export var operation := Operations.SET:
+>>>>>>> Stashed changes
 	set(value):
 		operation = value
 		if not (operation == Operations.SET or operation == Operations.ADD) and _value_type == VarValueType.STRING:
@@ -42,8 +50,13 @@ var operation := Operations.SET:
 		update_editor_warning()
 
 ## The value that is used. Can be a variable as well.
+<<<<<<< Updated upstream
 var value: Variant = ""
 var _value_type := 0 :
+=======
+@export var value: Variant = ""
+@export var _value_type := VarValueType.STRING :
+>>>>>>> Stashed changes
 	set(_value):
 		_value_type = _value
 		if not _suppress_default_value:
@@ -60,8 +73,13 @@ var _value_type := 0 :
 		update_editor_warning()
 
 ## If true, a random number between [random_min] and [random_max] is used instead of [value].
+<<<<<<< Updated upstream
 var random_min: int = 0
 var random_max: int = 100
+=======
+@export var random_min: int = 0
+@export var random_max: int = 100
+>>>>>>> Stashed changes
 
 ## Used to suppress _value_type from overwriting value with a default value when the type changes
 ## This is only used when initializing the event_variable.
@@ -229,6 +247,22 @@ func from_text(string:String) -> void:
 func is_valid_event(string:String) -> bool:
 	return string.begins_with('set')
 
+<<<<<<< Updated upstream
+=======
+
+## Only here to allow setting defaults in the module settings
+func get_shortcode_parameters() -> Dictionary:
+	return {
+		#param_name 	: property_info
+		"name" 			: {"property": "name", 					"default": ""},
+		"operation" 	: {"property": "operation",				"default": Operations.SET},
+		"value" 		: {"property": "value",					"default": ""},
+		"random_min" 	: {"property": "random_min", 			"default": 0},
+		"random_max" 	: {"property": "random_max", 			"default": 100},
+
+	}
+
+>>>>>>> Stashed changes
 #endregion
 
 

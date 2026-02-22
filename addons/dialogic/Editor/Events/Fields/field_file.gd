@@ -20,6 +20,12 @@ var resource_icon: Texture:
 		else:
 			%Field.theme_type_variation = "LineEditWithIcon"
 
+<<<<<<< Updated upstream
+=======
+## This type is used to store/restore the latest folder for a specific type of resource.
+## E.g. could be "portrait", or "background".
+@export var type := ""
+>>>>>>> Stashed changes
 var max_width := 200
 var current_value: String
 var hide_reset := false
@@ -32,6 +38,12 @@ var show_editing_button := false
 ################################################################################
 
 func _ready() -> void:
+<<<<<<< Updated upstream
+=======
+	if get_parent() is SubViewport:
+		return
+
+>>>>>>> Stashed changes
 	$FocusStyle.add_theme_stylebox_override('panel', get_theme_stylebox('focus', 'DialogicEventEdit'))
 
 	%OpenButton.icon = get_theme_icon("Folder", "EditorIcons")
@@ -57,6 +69,11 @@ func _load_display_info(info:Dictionary) -> void:
 	if resource_icon == null and info.has('editor_icon'):
 		resource_icon = callv('get_theme_icon', info.editor_icon)
 
+<<<<<<< Updated upstream
+=======
+	type = info.get("type", "")
+
+>>>>>>> Stashed changes
 
 func _set_value(value: Variant) -> void:
 	current_value = value
@@ -78,9 +95,13 @@ func _set_value(value: Variant) -> void:
 
 	%EditButton.visible = show_editing_button and value
 
+<<<<<<< Updated upstream
 	if not %Field.text == text:
 		value_changed.emit(property_name, current_value)
 		%Field.text = text
+=======
+	%Field.text = text
+>>>>>>> Stashed changes
 
 	%ClearButton.visible = not value.is_empty() and not hide_reset
 
@@ -92,7 +113,18 @@ func _set_value(value: Variant) -> void:
 ################################################################################
 
 func _on_OpenButton_pressed() -> void:
+<<<<<<< Updated upstream
 	find_parent('EditorView').godot_file_dialog(_on_file_dialog_selected, file_filter, file_mode, "Open "+ property_name)
+=======
+	find_parent('EditorView').godot_file_dialog(
+		_on_file_dialog_selected, file_filter, file_mode,
+		"Open "+ property_name,
+		"",
+		false,
+		"",
+		current_value.get_base_dir() if current_value else type)
+	%OpenButton.release_focus()
+>>>>>>> Stashed changes
 
 
 func _on_file_dialog_selected(path:String) -> void:

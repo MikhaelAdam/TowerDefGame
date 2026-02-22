@@ -9,7 +9,11 @@ extends DialogicEvent
 
 ## The name of the slot to save to. Learn more in the saving subsystem.
 ## If empty, the event will attempt to save to the latest slot, and otherwise use the default.
+<<<<<<< Updated upstream
 var slot_name := ""
+=======
+@export var slot_name := ""
+>>>>>>> Stashed changes
 
 
 #region EXECUTE

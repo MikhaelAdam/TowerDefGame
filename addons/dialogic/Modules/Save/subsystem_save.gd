@@ -73,21 +73,38 @@ var autosave_time := 60:
 		autosave_timer.wait_time = timer_time
 
 
+<<<<<<< Updated upstream
+=======
+var _debug_save_as_tres := false
+
+>>>>>>> Stashed changes
 #region STATE
 ####################################################################################################
 
 ## Built-in, called by DialogicGameHandler.
+<<<<<<< Updated upstream
 func clear_game_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+=======
+func _clear_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+>>>>>>> Stashed changes
 	_make_sure_slot_dir_exists()
 
 
 ## Built-in, called by DialogicGameHandler.
+<<<<<<< Updated upstream
 func pause() -> void:
+=======
+func _pause() -> void:
+>>>>>>> Stashed changes
 	autosave_timer.paused = true
 
 
 ## Built-in, called by DialogicGameHandler.
+<<<<<<< Updated upstream
 func resume() -> void:
+=======
+func _resume() -> void:
+>>>>>>> Stashed changes
 	autosave_timer.paused = false
 
 #endregion
@@ -111,6 +128,14 @@ func save(slot_name := "", is_autosave := false, thumbnail_mode := ThumbnailMode
 
 	set_latest_slot(slot_name)
 
+<<<<<<< Updated upstream
+=======
+	if _debug_save_as_tres:
+		var save_path := SAVE_SLOTS_DIR.path_join(slot_name).path_join('state.tres')
+		ResourceSaver.save(dialogic.get_full_state(), save_path)
+		return OK
+
+>>>>>>> Stashed changes
 	var save_error := save_file(slot_name, 'state.txt', dialogic.get_full_state())
 
 	if save_error:
@@ -145,10 +170,24 @@ func load(slot_name := "") -> Error:
 	if set_latest_error:
 		push_error("[Dialogic Error]: Failed to store latest slot to global info. Error %d '%s'" % [set_latest_error, error_string(set_latest_error)])
 
+<<<<<<< Updated upstream
 	var state: Dictionary = load_file(slot_name, 'state.txt', {})
 	dialogic.load_full_state(state)
 
 	if state.is_empty():
+=======
+	if _debug_save_as_tres:
+		var save_path := SAVE_SLOTS_DIR.path_join(slot_name).path_join('state.tres')
+		var tres_state: DialogicSaveState = ResourceLoader.load(save_path)
+		dialogic.load_full_state(tres_state)
+		return OK
+
+
+	var state: DialogicSaveState = load_file(slot_name, 'state.txt', {})
+	dialogic.load_full_state(state)
+
+	if not state:
+>>>>>>> Stashed changes
 		return FAILED
 	else:
 		return OK
@@ -173,16 +212,30 @@ func save_file(slot_name: String, file_name: String, data: Variant) -> Error:
 	if !has_slot(slot_name):
 		add_empty_slot(slot_name)
 
+<<<<<<< Updated upstream
+=======
+
+	var save_path := SAVE_SLOTS_DIR.path_join(slot_name).path_join(file_name)
+>>>>>>> Stashed changes
 	var encryption_password := get_encryption_password()
 	var file: FileAccess
 
 	if encryption_password.is_empty():
+<<<<<<< Updated upstream
 		file = FileAccess.open(SAVE_SLOTS_DIR.path_join(slot_name).path_join(file_name), FileAccess.WRITE)
 	else:
 		file = FileAccess.open_encrypted_with_pass(SAVE_SLOTS_DIR.path_join(slot_name).path_join(file_name), FileAccess.WRITE, encryption_password)
 
 	if file:
 		file.store_var(data)
+=======
+		file = FileAccess.open(save_path, FileAccess.WRITE)
+	else:
+		file = FileAccess.open_encrypted_with_pass(save_path, FileAccess.WRITE, encryption_password)
+
+	if file:
+		file.store_var(data, true)
+>>>>>>> Stashed changes
 		return OK
 	else:
 		var error := FileAccess.get_open_error()
@@ -208,7 +261,11 @@ func load_file(slot_name: String, file_name: String, default: Variant) -> Varian
 			file = FileAccess.open_encrypted_with_pass(path, FileAccess.READ, encryption_password)
 
 		if file:
+<<<<<<< Updated upstream
 			return file.get_var()
+=======
+			return file.get_var(true)
+>>>>>>> Stashed changes
 		else:
 			push_error(FileAccess.get_open_error())
 	return default

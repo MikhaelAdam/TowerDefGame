@@ -5,6 +5,7 @@ extends DialogicEvent
 ## Event that clears audio & visuals (not variables).
 ## Useful to make sure the scene is clear for a completely new thing.
 
+<<<<<<< Updated upstream
 var time := 1.0
 var step_by_step := true
 
@@ -14,6 +15,17 @@ var clear_style := true
 var clear_music := true
 var clear_portrait_positions := true
 var clear_background := true
+=======
+@export var time := 1.0
+@export var step_by_step := true
+
+@export var clear_textbox := true
+@export var clear_portraits := true
+@export var clear_style := true
+@export var clear_music := true
+@export var clear_portrait_positions := true
+@export var clear_background := true
+>>>>>>> Stashed changes
 
 #region EXECUTE
 ################################################################################

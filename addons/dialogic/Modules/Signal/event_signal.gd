@@ -9,10 +9,18 @@ extends DialogicEvent
 ### Settings
 
 enum ArgumentTypes {STRING, DICTIONARY}
+<<<<<<< Updated upstream
 var argument_type := ArgumentTypes.STRING
 
 ## The argument that will be provided with the signal.
 var argument: Variant = ""
+=======
+## The type of argument to be given with the signal.
+@export var argument_type := ArgumentTypes.STRING
+## The argument that will be provided with the signal.
+@export var argument: Variant = ""
+
+>>>>>>> Stashed changes
 
 
 #region EXECUTE

@@ -8,15 +8,25 @@ extends DialogicEvent
 ### Settings
 
 ## The path to the sound file.
+<<<<<<< Updated upstream
 var file_path := "":
+=======
+@export_file var file_path := "":
+>>>>>>> Stashed changes
 	set(value):
 		if file_path != value:
 			file_path = value
 			ui_update_needed.emit()
 ## The volume the sound will be played at.
+<<<<<<< Updated upstream
 var volume: float = 0
 ## The audio bus to play the sound on.
 var audio_bus := "Master"
+=======
+@export var volume: float = 0
+## The audio bus to play the sound on.
+@export var audio_bus := "Master"
+>>>>>>> Stashed changes
 
 
 #region EXECUTE
@@ -79,7 +89,12 @@ func build_event_editor() -> void:
 			'right_text'	: 'as the next voice audio',
 			'file_filter'	: "*.mp3, *.ogg, *.wav",
 			'placeholder' 	: "Select file",
+<<<<<<< Updated upstream
 			'editor_icon' 	: ["AudioStreamPlayer", "EditorIcons"]})
+=======
+			'editor_icon' 	: ["AudioStreamPlayer", "EditorIcons"],
+			"type":["VoiceAudio", "Audio", "Asset"]})
+>>>>>>> Stashed changes
 	add_header_edit('file_path', ValueType.AUDIO_PREVIEW)
 	add_body_edit('volume', ValueType.NUMBER, {'left_text':'Volume:', 'mode':2}, '!file_path.is_empty()')
 	add_body_edit('audio_bus', ValueType.SINGLELINE_TEXT, {'left_text':'Audio Bus:'}, '!file_path.is_empty()')

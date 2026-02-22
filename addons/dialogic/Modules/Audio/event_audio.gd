@@ -8,13 +8,21 @@ extends DialogicEvent
 ### Settings
 
 ## The file to play. If empty, the previous audio will be faded out.
+<<<<<<< Updated upstream
 var file_path := "":
+=======
+@export var file_path := "":
+>>>>>>> Stashed changes
 	set(value):
 		if file_path != value:
 			file_path = value
 			ui_update_needed.emit()
 ## The channel name to use. If none given plays as a One-Shot SFX.
+<<<<<<< Updated upstream
 var channel_name := "":
+=======
+@export var channel_name := "":
+>>>>>>> Stashed changes
 	set(value):
 		if channel_name != channel_name_regex.sub(value, '', true):
 			channel_name = channel_name_regex.sub(value, '', true)
@@ -27,6 +35,7 @@ var channel_name := "":
 				ui_update_needed.emit()
 
 ## The length of the fade. If 0 it's an instant change.
+<<<<<<< Updated upstream
 var fade_length: float = 0.0
 ## The volume in decibel.
 var volume: float = 0.0
@@ -36,6 +45,17 @@ var audio_bus := ""
 var loop := true
 ## Sync starting time with different channel (if playing audio on that channel)
 var sync_channel := ""
+=======
+@export var fade_length: float = 0.0
+## The volume in decibel.
+@export var volume: float = 0.0
+## The audio bus the audio will be played on.
+@export var audio_bus := ""
+## If true, the audio will loop, otherwise only play once.
+@export var loop := true
+## Sync starting time with different channel (if playing audio on that channel)
+@export var sync_channel := ""
+>>>>>>> Stashed changes
 
 ## Helpers. Set automatically
 var set_fade_length := false
@@ -269,7 +289,12 @@ func build_event_editor() -> void:
 			'left_text'		: 'Play',
 			'file_filter' 	: "*.mp3, *.ogg, *.wav; Supported Audio Files",
 			'placeholder' 	: "Nothing",
+<<<<<<< Updated upstream
 			'editor_icon' 	: ["AudioStreamMP3", "EditorIcons"]})
+=======
+			'editor_icon' 	: ["AudioStreamMP3", "EditorIcons"],
+			"type": "Audio, Asset"})
+>>>>>>> Stashed changes
 	add_header_edit('file_path', ValueType.AUDIO_PREVIEW)
 
 	add_header_edit('channel_name', ValueType.DYNAMIC_OPTIONS, {

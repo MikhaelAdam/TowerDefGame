@@ -150,6 +150,11 @@ func _on_hide_history_pressed() -> void:
 	var history_subsystem: Node = DialogicUtil.autoload().get(&'History')
 	get_show_history_button().visible = show_open_button and history_subsystem.get(&'simple_history_enabled')
 
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 func _on_skip_pressed() -> void:
 	Dialogic.Inputs.auto_skip.enabled = !Dialogic.Inputs.auto_skip.enabled
 

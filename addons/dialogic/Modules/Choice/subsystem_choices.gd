@@ -43,7 +43,11 @@ var _choice_blocker := Timer.new()
 #region STATE
 ####################################################################################################
 
+<<<<<<< Updated upstream
 func clear_game_state(_clear_flag:=DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+=======
+func _clear_state(_clear_flag:=DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+>>>>>>> Stashed changes
 	hide_all_choices()
 
 
@@ -60,7 +64,11 @@ func _ready() -> void:
 	default_false_behaviour = ProjectSettings.get_setting('dialogic/choices/def_false_behaviour', default_false_behaviour)
 
 
+<<<<<<< Updated upstream
 func post_install() -> void:
+=======
+func _post_install() -> void:
+>>>>>>> Stashed changes
 	dialogic.Inputs.dialogic_action.connect(_on_dialogic_action)
 
 #endregion

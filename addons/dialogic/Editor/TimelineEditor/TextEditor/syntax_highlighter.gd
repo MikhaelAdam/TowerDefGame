@@ -181,8 +181,17 @@ func color_region(dict:Dictionary, color:Color, line:String, start:String, end:S
 	if end.is_empty():
 		region_regex.compile(r"(?<!\\)"+start+".*")
 	else:
+<<<<<<< Updated upstream
 		r"(?<!\\){([^{}]|({[^}]*}))*}"
 		region_regex.compile(r"(?<!\\)"+start+"([^"+start+end+"]|("+start+"[^"+end+"]*"+end+"))*"+end)
+=======
+		if start != end:
+			r"(?<!\\){([^{}]|({[^}]*}))*}" # example for { }
+			region_regex.compile(r"(?<!\\)"+start+"([^"+start+end+"]|("+start+"[^"+end+"]*"+end+"))*"+end)
+		else:
+			r"(?<!\\)'([^'])*'" # example for ' '
+			region_regex.compile(r"(?<!\\)"+start+"([^"+end+"])*"+end)
+>>>>>>> Stashed changes
 	if to <= from:
 		to = len(line)-1
 	for region in region_regex.search_all(line.substr(from, to-from+2)):

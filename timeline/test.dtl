@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 join Policeman/Police left [animation="Fade In" wait="true"]
 leave Policeman/Police [animation="Fade Out" wait="true"]
 join "Band Girl" left [animation="Fade In" wait="true"]
@@ -7,3 +8,15 @@ leave Entity [animation="Fade Out" wait="true"]
 join MainCharacter left [animation="Fade In" wait="true"]
 leave MainCharacter [animation="Fade Out" wait="true"]
 join  center
+=======
+join Ami left [animation="Fade In" length="2.0" wait="true"]
+leave Ami [animation="Fade In" length="2.0" wait="true"]
+join Lisa left [animation="Fade In" length="2.0" wait="true"]
+leave Lisa [animation="Fade In" length="2.0" wait="true"]
+join Marika left [animation="Fade In" length="2.0" wait="true"]
+leave Marika [animation="Fade In" length="2.0" wait="true"]
+join Steve center [animation="Fade In" length="2.0" wait="true"]
+leave Steve [animation="Fade In" length="2.0" wait="true"]
+join Sigma center [animation="Fade In" length="2.0" wait="true"]
+leave Sigma [animation="Fade In" length="2.0" wait="true"]
+>>>>>>> Stashed changes

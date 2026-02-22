@@ -382,7 +382,10 @@ func load_layout_scene_customization(custom_scene_path:String, overrides:Diction
 				current_subgroup_name = ""
 
 			&"SUBGROUP":
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 				# add separator
 				if current_subgroup_name:
 					current_grid.add_child(HSeparator.new())
@@ -496,6 +499,7 @@ func set_export_override(property_name:String, value:String = "") -> void:
 func _on_export_override_reset(property_name:String) -> void:
 	current_style.remove_layer_setting(current_layer_id, property_name)
 	customization_editor_info[property_name]["reset"].disabled = true
+<<<<<<< Updated upstream
 	set_customization_value(property_name, customization_editor_info[property_name]["orig"])
 
 
@@ -513,6 +517,11 @@ func set_customization_value(property_name:String, value:Variant) -> void:
 		node.select(value)
 	elif node is SpinBox:
 		node.value = value
+=======
+	var node: Node = customization_editor_info[property_name]["node"]
+	DialogicUtil.set_property_edit_node_value(node, customization_editor_info[property_name]["orig"])
+
+>>>>>>> Stashed changes
 
 #endregion
 

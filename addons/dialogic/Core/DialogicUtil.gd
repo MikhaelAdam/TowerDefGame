@@ -19,7 +19,11 @@ static func get_editor_scale() -> float:
 static func get_dialogic_plugin() -> Node:
 	for child in Engine.get_main_loop().get_root().get_children():
 		if child.get_class() == "EditorNode":
+<<<<<<< Updated upstream
 			return child.get_node('DialogicPlugin')
+=======
+			return child.get_node("DialogicPlugin")
+>>>>>>> Stashed changes
 	return null
 
 #endregion
@@ -135,6 +139,12 @@ static func pretty_name(file_path: String) -> String:
 #region EDITOR SETTINGS & COLORS
 ################################################################################
 
+<<<<<<< Updated upstream
+=======
+const SETTING_HIDDEN_BUTTONS_DEFAULT := ["Setting", "History", "Save"]
+const SETTING_BUTTON_SECTION_ORDER := ["Main", "Flow", "Audio", "Visuals", "Logic", "Other"]
+
+>>>>>>> Stashed changes
 static func set_editor_setting(setting:String, value:Variant) -> void:
 	var cfg := ConfigFile.new()
 	if FileAccess.file_exists("user://dialogic/editor_settings.cfg"):
@@ -425,6 +435,7 @@ static func setup_script_property_edit_node(property_info: Dictionary, value:Var
 			input.color_changed.connect(DialogicUtil._on_export_color_submitted.bind(property_info.name, property_changed))
 			input.custom_minimum_size.x = get_editor_scale() * 50
 		TYPE_INT:
+<<<<<<< Updated upstream
 			if property_info['hint'] & PROPERTY_HINT_ENUM == PROPERTY_HINT_ENUM:
 				input = OptionButton.new()
 				for x in property_info['hint_string'].split(','):
@@ -432,6 +443,20 @@ static func setup_script_property_edit_node(property_info: Dictionary, value:Var
 				if value != null:
 					input.select(value)
 				input.item_selected.connect(DialogicUtil._on_export_int_enum_submitted.bind(property_info.name, property_changed))
+=======
+			if property_info["hint"] & PROPERTY_HINT_ENUM == PROPERTY_HINT_ENUM:
+				input = OptionButton.new()
+				var idx := 0
+				for x in property_info["hint_string"].split(","):
+					input.add_item((Array(x.split(":"))[0] if ":" in x else x).capitalize())
+					var id := int(Array(x.split(":"))[1] if ":" in x else idx)
+					input.set_item_metadata(idx, id)
+					if value == id:
+						input.select(idx)
+
+					idx += 1
+				input.item_selected.connect(DialogicUtil._on_export_int_enum_submitted.bind(property_info.name, property_changed, input))
+>>>>>>> Stashed changes
 			else:
 				input = load("res://addons/dialogic/Editor/Events/Fields/field_number.tscn").instantiate()
 				input.property_name = property_info['name']
@@ -509,6 +534,14 @@ static func setup_script_property_edit_node(property_info: Dictionary, value:Var
 			input.property_name = property_info["name"]
 			input.set_value(value)
 			input.value_changed.connect(_on_export_dict_submitted.bind(property_changed))
+<<<<<<< Updated upstream
+=======
+		TYPE_ARRAY:
+			input = load("res://addons/dialogic/Editor/Events/Fields/field_array.tscn").instantiate()
+			input.property_name = property_info["name"]
+			input.set_value(value)
+			input.value_changed.connect(_on_export_array_submitted.bind(property_changed))
+>>>>>>> Stashed changes
 		TYPE_OBJECT:
 			input = load("res://addons/dialogic/Editor/Common/hint_tooltip_icon.tscn").instantiate()
 			input.hint_text = "Objects/Resources as settings are currently not supported. \nUse @export_file('*.extension') instead and load the resource once needed."
@@ -530,8 +563,13 @@ static func _on_export_bool_submitted(value:bool, property_name:String, callable
 static func _on_export_color_submitted(color:Color, property_name:String, callable: Callable) -> void:
 	callable.call(property_name, var_to_str(color))
 
+<<<<<<< Updated upstream
 static func _on_export_int_enum_submitted(item:int, property_name:String, callable: Callable) -> void:
 	callable.call(property_name, var_to_str(item))
+=======
+static func _on_export_int_enum_submitted(item:int, property_name:String, callable: Callable, option_button:OptionButton) -> void:
+	callable.call(property_name, var_to_str(option_button.get_item_metadata(item)))
+>>>>>>> Stashed changes
 
 static func _on_export_number_submitted(property_name:String, value:float, callable: Callable) -> void:
 	callable.call(property_name, var_to_str(value))
@@ -555,6 +593,29 @@ static func _on_export_vectori_submitted(property_name:String, value:Variant, ca
 static func _on_export_dict_submitted(property_name:String, value:Variant, callable: Callable) -> void:
 	callable.call(property_name, var_to_str(value))
 
+<<<<<<< Updated upstream
+=======
+static func _on_export_array_submitted(property_name:String, value:Variant, callable: Callable) -> void:
+	callable.call(property_name, var_to_str(value))
+
+static func set_property_edit_node_value(node:Control, value:Variant) -> void:
+	if node is CheckBox:
+		node.button_pressed = value
+	elif node is LineEdit:
+		node.text = value
+	elif node.has_method("set_value"):
+		node.set_value(value)
+	elif node is ColorPickerButton:
+		node.color = value
+	elif node is OptionButton:
+		for i in range(node.item_count):
+			if node.get_item_metadata(i) == value:
+				node.select(i)
+	elif node is SpinBox:
+		node.value = value
+
+
+>>>>>>> Stashed changes
 #endregion
 
 

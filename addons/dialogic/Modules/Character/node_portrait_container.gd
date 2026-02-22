@@ -82,8 +82,16 @@ var default_debug_character := load(DialogicUtil.get_module_path('Character').pa
 
 var ignore_resize := false
 
+<<<<<<< Updated upstream
 
 func _ready() -> void:
+=======
+var debug_draw := false
+
+
+func _ready() -> void:
+	debug_draw = DialogicUtil.autoload().PortraitContainers.debug_draw
+>>>>>>> Stashed changes
 	match mode:
 		PositionModes.POSITION:
 			add_to_group('dialogic_portrait_con_position')
@@ -166,9 +174,17 @@ func is_container(id:Variant) -> bool:
 #region DEBUG METHODS
 ################################################################################
 ### USE THIS TO DEBUG THE POSITIONS
+<<<<<<< Updated upstream
 #func _draw():
 	#draw_rect(Rect2(Vector2(), size), Color(1, 0.3098039329052, 1), false, 2)
 	#draw_string(get_theme_default_font(),get_theme_default_font().get_string_size(container_ids[0], HORIZONTAL_ALIGNMENT_LEFT, 1, get_theme_default_font_size()) , container_ids[0], HORIZONTAL_ALIGNMENT_CENTER)
+=======
+
+func _draw():
+	if debug_draw:
+		draw_rect(Rect2(Vector2(), size), Color(1, 0.3098039329052, 1), false, 2)
+		draw_string(get_theme_default_font(),get_theme_default_font().get_string_size(container_ids[0], HORIZONTAL_ALIGNMENT_LEFT, 1, get_theme_default_font_size())+Vector2(8,0) , container_ids[0], HORIZONTAL_ALIGNMENT_CENTER)
+>>>>>>> Stashed changes
 #
 #func _process(delta:float) -> void:
 	#queue_redraw()

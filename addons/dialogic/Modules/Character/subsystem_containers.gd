@@ -7,6 +7,19 @@ signal position_changed(info: Dictionary)
 
 var transform_regex := r"(?<part>position|pos|size|siz|rotation|rot)\W*=(?<value>((?!(pos|siz|rot)).)*)"
 
+<<<<<<< Updated upstream
+=======
+@export_group("State")
+@export var container_info := {}
+
+var debug_draw := false :
+	set(x):
+		debug_draw = x
+		for n in get_tree().get_nodes_in_group(&'dialogic_portrait_con_position'):
+			n.debug_draw = x
+
+
+>>>>>>> Stashed changes
 #region STATE
 ####################################################################################################
 
@@ -18,7 +31,11 @@ var transform_regex := r"(?<part>position|pos|size|siz|rotation|rot)\W*=(?<value
 ####################################################################################################
 
 func get_container(position_id: String) -> DialogicNode_PortraitContainer:
+<<<<<<< Updated upstream
 	for portrait_position:DialogicNode_PortraitContainer in get_tree().get_nodes_in_group(&'dialogic_portrait_con_position'):
+=======
+	for portrait_position: DialogicNode_PortraitContainer in get_tree().get_nodes_in_group(&'dialogic_portrait_con_position'):
+>>>>>>> Stashed changes
 		if portrait_position.is_visible_in_tree() and portrait_position.is_container(position_id):
 			return portrait_position
 	return null
@@ -190,9 +207,12 @@ func resize_container(container: DialogicNode_PortraitContainer, rect_size: Vari
 
 
 func save_position_container(container: DialogicNode_PortraitContainer) -> void:
+<<<<<<< Updated upstream
 	if not dialogic.current_state_info.has('portrait_containers'):
 		dialogic.current_state_info['portrait_containers'] = {}
 
+=======
+>>>>>>> Stashed changes
 	var info := {
 		"container_ids" : container.container_ids,
 		"position" : container.position,
@@ -211,7 +231,11 @@ func save_position_container(container: DialogicNode_PortraitContainer) -> void:
 		"offset_bottom" : container.offset_bottom,
 	}
 
+<<<<<<< Updated upstream
 	dialogic.current_state_info.portrait_containers[container.container_ids[0]] = info
+=======
+	container_info[container.container_ids[0]] = info
+>>>>>>> Stashed changes
 
 
 func load_position_container(position_id: String) -> DialogicNode_PortraitContainer:
@@ -220,10 +244,17 @@ func load_position_container(position_id: String) -> DialogicNode_PortraitContai
 	if container:
 		return container
 
+<<<<<<< Updated upstream
 	if not dialogic.current_state_info.has('portrait_containers') or not dialogic.current_state_info.portrait_containers.has(position_id):
 		return null
 
 	var info: Dictionary = dialogic.current_state_info.portrait_containers[position_id]
+=======
+	if not container_info.has(position_id):
+		return null
+
+	var info: Dictionary = container_info[position_id]
+>>>>>>> Stashed changes
 	container = add_container(position_id)
 
 	if not container:

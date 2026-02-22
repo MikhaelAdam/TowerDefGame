@@ -6,9 +6,18 @@ func _ready() -> void:
 	if get_parent() is SubViewport:
 		return
 
+<<<<<<< Updated upstream
 	add_theme_stylebox_override("panel", get_theme_stylebox("Background", "EditorStyles"))
 	$Tabs/Close.icon = get_theme_icon("Close", "EditorIcons")
 
+=======
+	add_theme_stylebox_override("panel", get_theme_stylebox("Background", "EditorStyles").duplicate())
+	get_theme_stylebox("panel").set_content_margin_all(10)
+	$Tabs/Close.icon = get_theme_icon("Close", "EditorIcons")
+
+	%HelpButton.icon = get_theme_icon("ExternalLink", "EditorIcons")
+
+>>>>>>> Stashed changes
 	for tab in $Tabs/Tabs.get_children():
 		tab.add_theme_color_override("font_selected_color", get_theme_color("accent_color", "Editor"))
 		tab.add_theme_font_override("font", get_theme_font("main", "EditorFonts"))
@@ -36,3 +45,10 @@ func open() -> void:
 
 func _on_close_pressed() -> void:
 	get_parent()._on_close_requested()
+<<<<<<< Updated upstream
+=======
+
+
+func _on_help_button_pressed() -> void:
+	OS.shell_open("https://docs.dialogic.pro/reference-manager.html")
+>>>>>>> Stashed changes

@@ -23,12 +23,16 @@ config/icon="res://icon.svg"
 
 <<<<<<< Updated upstream
 Singleton="*uid://c3jk2ag75sjbi"
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
 directories/dch_directory={
+<<<<<<< Updated upstream
 "Band Girl": "res://assets/character/Bandgirl/Band Girl.dch",
 "Entity": "res://assets/character/Entity/Entity.dch",
 "MainCharacter": "res://assets/character/MainCharacter/MainCharacter.dch",
@@ -67,6 +71,41 @@ text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
 text/advance_delay=0.1
 text/autoadvance_per_character_delay=0
+=======
+"Ami": "res://assets/character/Ami/Ami.dch",
+"Lisa": "res://assets/character/Lisa/Lisa.dch",
+"Marika": "res://assets/character/Marika/Marika.dch",
+"Placeholder": "res://assets/character/Auxilary/Placeholder.dch",
+"Sigma": "res://assets/character/Boss/Sigma.dch",
+"Steve": "res://assets/character/Steve/Steve.dch",
+"Strange Creature": "res://assets/character/Auxilary/Strange Creature.dch",
+"UCP1": "res://assets/character/Auxilary/UCP1.dch",
+"UCP2": "res://assets/character/Auxilary/UCP2.dch",
+"caster": "res://assets/character/Auxilary/caster.dch",
+"unit_test_character": "res://Tests/Resources/unit_test_character.dch"
+}
+directories/dtl_directory={
+"ending": "res://timeline/ending.dtl",
+"epilog": "res://timeline/epilog.dtl",
+"scene1": "res://timeline/scene1.dtl",
+"scene2": "res://timeline/scene2.dtl",
+"scene3": "res://timeline/scene3.dtl",
+"scene4": "res://timeline/scene4.dtl",
+"scene5": "res://timeline/scene5.dtl",
+"test": "res://timeline/test.dtl",
+"tutorial1": "res://timeline/tutorial1.dtl",
+"tutorial2": "res://timeline/tutorial2.dtl"
+}
+layout/style_directory={
+"": "res://addons/style/fix.tres",
+"fix": "res://addons/style/fix.tres"
+}
+text/letter_speed=0.02
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+>>>>>>> Stashed changes
 text/autoadvance_ignored_characters_enabled=true
 animations/join_default_length=0.5
 animations/join_default_wait=true
@@ -94,6 +133,7 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+<<<<<<< Updated upstream
 variables={}
 text/autoskip_time_per_event=0.0
 text/input_action="dialogic_default_action"
@@ -103,6 +143,17 @@ history/full_history_enabled=false
 history/visited_event_history_enabled=false
 text/autoadvance_fixed_delay=0.5
 text/autoadvance_per_word_delay=0.4
+>>>>>>> Stashed changes
+=======
+history/simple_history_enabled=false
+history/full_history_enabled=false
+text/autoadvance_fixed_delay=0.5
+variables={}
+layout/style_list=["res://addons/style/fix.tres"]
+layout/default_style="res://addons/style/fix.tres"
+glossary/default_case_sensitive=true
+history/visited_event_history_enabled=true
+text/autoskip_time_per_event=0.0
 >>>>>>> Stashed changes
 
 [display]

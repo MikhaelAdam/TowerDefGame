@@ -12,7 +12,11 @@ signal input_shown(info:Dictionary)
 #region STATE
 ####################################################################################################
 
+<<<<<<< Updated upstream
 func clear_game_state(_clear_flag:=DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+=======
+func _clear_state(_clear_flag:=DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+>>>>>>> Stashed changes
 	hide_text_input()
 
 #endregion

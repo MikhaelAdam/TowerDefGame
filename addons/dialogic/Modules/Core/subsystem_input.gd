@@ -37,11 +37,22 @@ var auto_advance: DialogicAutoAdvance = null
 ## The [DialogicManualAdvance] object used.
 var manual_advance: DialogicManualAdvance = null
 
+<<<<<<< Updated upstream
+=======
+@export_group("State")
+@export var manual_advance_info := {
+	DialogicManualAdvance.ENABLED_STATE_KEY: true,
+	DialogicManualAdvance.DISABLED_UNTIL_NEXT_EVENT_STATE_KEY: false}
+>>>>>>> Stashed changes
 
 #region SUBSYSTEM METHODS
 ################################################################################
 
+<<<<<<< Updated upstream
 func clear_game_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+=======
+func _clear_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+>>>>>>> Stashed changes
 	if not is_node_ready():
 		await ready
 
@@ -49,12 +60,17 @@ func clear_game_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) 
 	manual_advance.system_enabled = true
 
 
+<<<<<<< Updated upstream
 func pause() -> void:
+=======
+func _pause() -> void:
+>>>>>>> Stashed changes
 	auto_advance.autoadvance_timer.paused = true
 	input_block_timer.paused = true
 	set_process(false)
 
 
+<<<<<<< Updated upstream
 func resume() -> void:
 	auto_advance.autoadvance_timer.paused = false
 	input_block_timer.paused = false
@@ -64,6 +80,21 @@ func resume() -> void:
 
 func post_install() -> void:
 	dialogic.Settings.connect_to_change('autoadvance_delay_modifier', auto_advance._update_autoadvance_delay_modifier)
+=======
+func _resume() -> void:
+	auto_advance.autoadvance_timer.paused = false
+	input_block_timer.paused = false
+	var is_autoskip_timer_done := _auto_skip_timer_left > 0.0
+	set_process(not is_autoskip_timer_done)
+
+
+func _post_install() -> void:
+	auto_skip = DialogicAutoSkip.new()
+	auto_advance = DialogicAutoAdvance.new()
+	manual_advance = DialogicManualAdvance.new()
+
+	dialogic.Settings.connect_to_change("autoadvance_delay_modifier", auto_advance._update_autoadvance_delay_modifier)
+>>>>>>> Stashed changes
 	auto_skip.toggled.connect(_on_autoskip_toggled)
 	auto_skip._init()
 	add_child(input_block_timer)
@@ -128,7 +159,11 @@ func _input(event:InputEvent) -> void:
 	if is_input_pressed(event):
 		if not event is InputEventMouse:
 			return
+<<<<<<< Updated upstream
 		if get_tree().get_nodes_in_group('dialogic_input').any(func(node):return node.is_visible_in_tree()):
+=======
+		if get_tree().get_nodes_in_group("dialogic_input").any(func(node):return node.is_visible_in_tree()):
+>>>>>>> Stashed changes
 			return
 		input_was_mouse_input = true
 		handle_input()
@@ -165,9 +200,12 @@ func block_input(time:=0.1) -> void:
 
 
 func _ready() -> void:
+<<<<<<< Updated upstream
 	auto_skip = DialogicAutoSkip.new()
 	auto_advance = DialogicAutoAdvance.new()
 	manual_advance = DialogicManualAdvance.new()
+=======
+>>>>>>> Stashed changes
 
 	# We use the process method to count down the auto-start_autoskip_timer timer.
 	set_process(false)
@@ -241,8 +279,13 @@ func effect_noskip(text_node:Control, skipped:bool, argument:String) -> void:
 ## An argument can be given to control the delay of the autoadvance.
 ## If the argument ends with `?` the effect will not enable auto-advance and only set the delay for an already enable auto advance.
 func effect_autoadvance(_text_node: Control, _skipped:bool, argument:String) -> void:
+<<<<<<< Updated upstream
 	if argument.ends_with('?'):
 		argument = argument.trim_suffix('?')
+=======
+	if argument.ends_with("?"):
+		argument = argument.trim_suffix("?")
+>>>>>>> Stashed changes
 	else:
 		auto_advance.enabled_until_next_event = true
 

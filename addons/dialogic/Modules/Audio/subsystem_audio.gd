@@ -19,6 +19,13 @@ extends DialogicSubsystem
 signal audio_started(info: Dictionary)
 
 
+<<<<<<< Updated upstream
+=======
+@export_group("State")
+@export var info := {}
+
+
+>>>>>>> Stashed changes
 ## Audio node for holding audio players
 var audio_node := Node.new()
 ## Sound node for holding sound players
@@ -30,12 +37,17 @@ var current_audio_channels: Dictionary = {}
 ####################################################################################################
 
 ## Clears the state on this subsystem and stops all audio.
+<<<<<<< Updated upstream
 func clear_game_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+=======
+func _clear_state(_clear_flag := DialogicGameHandler.ClearFlags.FULL_CLEAR) -> void:
+>>>>>>> Stashed changes
 	stop_all_channels()
 	stop_all_one_shot_sounds()
 
 
 ## Loads the state on this subsystem from the current state info.
+<<<<<<< Updated upstream
 func load_game_state(load_flag:=LoadFlags.FULL_LOAD) -> void:
 	if load_flag == LoadFlags.ONLY_DNODES:
 		return
@@ -45,6 +57,12 @@ func load_game_state(load_flag:=LoadFlags.FULL_LOAD) -> void:
 
 	var info: Dictionary = dialogic.current_state_info.get("audio", {})
 
+=======
+func _load_state(load_flag:=LoadFlags.FULL_LOAD) -> void:
+	if load_flag == LoadFlags.ONLY_DNODES:
+		return
+
+>>>>>>> Stashed changes
 	for channel_name in info.keys():
 		if info[channel_name].path.is_empty():
 			update_audio(channel_name)
@@ -53,7 +71,11 @@ func load_game_state(load_flag:=LoadFlags.FULL_LOAD) -> void:
 
 
 ## Pauses playing audio.
+<<<<<<< Updated upstream
 func pause() -> void:
+=======
+func _pause() -> void:
+>>>>>>> Stashed changes
 	for child in audio_node.get_children():
 		child.stream_paused = true
 	for child in one_shot_audio_node.get_children():
@@ -61,7 +83,11 @@ func pause() -> void:
 
 
 ## Resumes playing audio.
+<<<<<<< Updated upstream
 func resume() -> void:
+=======
+func _resume() -> void:
+>>>>>>> Stashed changes
 	for child in audio_node.get_children():
 		child.stream_paused = false
 	for child in one_shot_audio_node.get_children():
@@ -70,7 +96,11 @@ func resume() -> void:
 
 func _on_dialogic_timeline_ended() -> void:
 	if not dialogic.Styles.get_layout_node():
+<<<<<<< Updated upstream
 		clear_game_state()
+=======
+		_clear_state()
+>>>>>>> Stashed changes
 
 #endregion
 
@@ -120,6 +150,7 @@ func update_audio(channel_name:= "", path := "", settings_overrides := {}) -> vo
 			prev_audio_node.queue_free()
 
 	## Set state
+<<<<<<< Updated upstream
 	if not dialogic.current_state_info.has('audio'):
 		dialogic.current_state_info['audio'] = {}
 
@@ -129,6 +160,14 @@ func update_audio(channel_name:= "", path := "", settings_overrides := {}) -> vo
 
 	dialogic.current_state_info['audio'][channel_name] = {'path':path, 'settings_overrides':settings_overrides}
 	audio_started.emit(dialogic.current_state_info['audio'][channel_name])
+=======
+	if not path:
+		info.erase(channel_name)
+		return
+
+	info[channel_name] = {'path':path, 'settings_overrides':settings_overrides}
+	audio_started.emit(info[channel_name])
+>>>>>>> Stashed changes
 
 	var new_player := AudioStreamPlayer.new()
 	if channel_name:
@@ -236,6 +275,7 @@ func _on_audio_finished(player: AudioStreamPlayer, channel_name: String, path: S
 	if current_audio_channels.has(channel_name) and current_audio_channels[channel_name] == player:
 		current_audio_channels.erase(channel_name)
 	player.queue_free()
+<<<<<<< Updated upstream
 	if dialogic.current_state_info.get('audio', {}).get(channel_name, {}).get('path', '') == path:
 		dialogic.current_state_info['audio'].erase(channel_name)
 
@@ -280,5 +320,9 @@ func _convert_state_info() -> void:
 
 	dialogic.current_state_info['audio'] = new_info
 	dialogic.current_state_info.erase('music')
+=======
+	if info.get(channel_name, {}).get('path', '') == path:
+		info.erase(channel_name)
+>>>>>>> Stashed changes
 
 #endregion
