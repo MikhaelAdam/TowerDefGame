@@ -1,0 +1,6 @@
+[background fade="2.0" wait="true"]
+Entity: Then let’s play again.
+[clear time="1.0" portraits="false" music="false" background="false" positions="false" style="false"]
+[background fade="2.0" wait="true"]
+placehodler: one day.
+[signal arg="done"]

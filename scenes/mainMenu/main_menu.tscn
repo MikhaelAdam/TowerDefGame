@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://dmrrhnnaajion"]
+
+[ext_resource type="Script" uid="uid://c06arbrgdxf6w" path="res://scenes/mainMenu/main_menu.gd" id="1_y7a7g"]
+[ext_resource type="Texture2D" uid="uid://dix0trqyvxi50" path="res://assets/main menu/bg.png" id="2_fmbgv"]
+[ext_resource type="Texture2D" uid="uid://bofvp6wbiintg" path="res://assets/main menu/play_hover.svg" id="2_m8roa"]
+<<<<<<< Updated upstream:scenes/UI/Menu/main_menu.tscn
+[ext_resource type="Texture2D" uid="uid://du15oexxb4dx4" path="res://assets/main menu/play_normal.png" id="3_afbwa"]
+[ext_resource type="Texture2D" uid="uid://ghxh03lkpt5v" path="res://assets/main menu/option_hover.svg" id="3_q6htt"]
+[ext_resource type="Texture2D" uid="uid://gj05ififnafd" path="res://assets/main menu/exit_hover.svg" id="4_fmbgv"]
+[ext_resource type="Texture2D" uid="uid://dq8q4yt4qtvs3" path="res://assets/main menu/option_normal.png" id="5_ih7ev"]
+[ext_resource type="Texture2D" uid="uid://c1f0kyqtwpram" path="res://assets/main menu/exit_normal.png" id="7_f0uag"]
+=======
+[ext_resource type="Texture2D" uid="uid://du15oexxb4dx4" path="res://assets/main menu/play_normal.png" id="3_biq0h"]
+[ext_resource type="Texture2D" uid="uid://ghxh03lkpt5v" path="res://assets/main menu/option_hover.svg" id="3_q6htt"]
+[ext_resource type="Texture2D" uid="uid://gj05ififnafd" path="res://assets/main menu/exit_hover.svg" id="4_fmbgv"]
+[ext_resource type="Texture2D" uid="uid://dq8q4yt4qtvs3" path="res://assets/main menu/option_normal.png" id="5_7st3g"]
+[ext_resource type="Texture2D" uid="uid://c1f0kyqtwpram" path="res://assets/main menu/exit_normal.png" id="7_11v51"]
+>>>>>>> Stashed changes:scenes/mainMenu/main_menu.tscn
+
+[node name="MainMenu" type="Control" unique_id=1053707141]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y7a7g")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1406565861]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fmbgv")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ButtonPosition" type="MarginContainer" parent="." unique_id=274376069]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -230.0
+offset_top = -302.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ButtonPosition" unique_id=674138736]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ButtonPosition/HBoxContainer" unique_id=41822474]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="Play" type="TextureButton" parent="ButtonPosition/HBoxContainer/VBoxContainer" unique_id=319688740]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+<<<<<<< Updated upstream:scenes/UI/Menu/main_menu.tscn
+texture_normal = ExtResource("3_afbwa")
+=======
+texture_normal = ExtResource("3_biq0h")
+>>>>>>> Stashed changes:scenes/mainMenu/main_menu.tscn
+texture_hover = ExtResource("2_m8roa")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Option" type="TextureButton" parent="ButtonPosition/HBoxContainer/VBoxContainer" unique_id=1668259449]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+<<<<<<< Updated upstream:scenes/UI/Menu/main_menu.tscn
+texture_normal = ExtResource("5_ih7ev")
+=======
+texture_normal = ExtResource("5_7st3g")
+>>>>>>> Stashed changes:scenes/mainMenu/main_menu.tscn
+texture_hover = ExtResource("3_q6htt")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Exit" type="TextureButton" parent="ButtonPosition/HBoxContainer/VBoxContainer" unique_id=1869465388]
+custom_minimum_size = Vector2(230, 80)
+layout_mode = 2
+<<<<<<< Updated upstream:scenes/UI/Menu/main_menu.tscn
+texture_normal = ExtResource("7_f0uag")
+=======
+texture_normal = ExtResource("7_11v51")
+>>>>>>> Stashed changes:scenes/mainMenu/main_menu.tscn
+texture_hover = ExtResource("4_fmbgv")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="BottomPadding" type="MarginContainer" parent="ButtonPosition/HBoxContainer/VBoxContainer" unique_id=1200718068]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="RightPadding" type="MarginContainer" parent="ButtonPosition/HBoxContainer" unique_id=882316319]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
+
+[connection signal="pressed" from="ButtonPosition/HBoxContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ButtonPosition/HBoxContainer/VBoxContainer/Option" to="." method="_on_option_pressed"]
+[connection signal="pressed" from="ButtonPosition/HBoxContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
