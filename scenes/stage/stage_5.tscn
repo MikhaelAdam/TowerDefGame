@@ -1,0 +1,468 @@
+[gd_scene format=3 uid="uid://dyhff2nu7pe2n"]
+
+[ext_resource type="Script" uid="uid://cwsy04dxgw0eg" path="res://scripts/stage.gd" id="1_3th34"]
+[ext_resource type="Texture2D" uid="uid://ca1j3xxog7hh5" path="res://assets/Map_Stage/Stage 5 - Final.png" id="2_wtpsi"]
+[ext_resource type="Script" uid="uid://3q0er4mn2nwp" path="res://scenes/harvester/harvester.gd" id="3_wtpsi"]
+[ext_resource type="Script" uid="uid://c3xo1jdn6ecwp" path="res://scripts/placementarea.gd" id="4_y3agc"]
+[ext_resource type="PackedScene" uid="uid://dwhprl71esbko" path="res://scenes/UI/battle_ui.tscn" id="5_olrfe"]
+
+[sub_resource type="Curve2D" id="Curve2D_3th34"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -39, 166, 0, 0, 0, 0, 330, 26, 0, 0, 0, 0, 1039, 31)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_wtpsi"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -54, 282, 0, 0, 0, 0, 1136, 274)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3agc"]
+size = Vector2(144, 164)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_olrfe"]
+size = Vector2(87, 71)
+
+[sub_resource type="Curve2D" id="Curve2D_y3agc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -54, 414, 0, 0, 0, 0, 216, 601, 0, 0, 0, 0, 1091, 606)
+}
+point_count = 3
+
+[node name="Stage5" type="Node2D" unique_id=1486104968 node_paths=PackedStringArray("paths", "battle_ui")]
+script = ExtResource("1_3th34")
+paths = [NodePath("Path2D"), NodePath("Path2D2"), NodePath("Path2D3")]
+max_enemies = 50
+battle_ui = NodePath("CanvasLayer/BattleUI")
+time_spawn = 3.0
+level = 5
+metadata/_custom_type_script = "uid://cwsy04dxgw0eg"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1104712564]
+z_index = -4
+position = Vector2(577.6667, 326)
+scale = Vector2(0.3009259, 0.3009259)
+texture = ExtResource("2_wtpsi")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=691491844]
+curve = SubResource("Curve2D_3th34")
+
+[node name="Path2D2" type="Path2D" parent="." unique_id=1502088337]
+curve = SubResource("Curve2D_wtpsi")
+
+[node name="Harvester" type="Area2D" parent="." unique_id=373094027]
+position = Vector2(1145, 327)
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("3_wtpsi")
+metadata/_custom_type_script = "uid://3q0er4mn2nwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Harvester" unique_id=162214565]
+shape = SubResource("RectangleShape2D_y3agc")
+
+[node name="PlacementArea" type="Area2D" parent="." unique_id=1511135800]
+position = Vector2(433, 37)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea" unique_id=1156378796]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea2" type="Area2D" parent="." unique_id=881558210]
+position = Vector2(531, 41)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea2" unique_id=1674089746]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea3" type="Area2D" parent="." unique_id=379016568]
+position = Vector2(629, 37)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea3" unique_id=947701255]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea4" type="Area2D" parent="." unique_id=606240595]
+position = Vector2(734, 37)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea4" unique_id=971461061]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea5" type="Area2D" parent="." unique_id=230560907]
+position = Vector2(839, 41)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea5" unique_id=1986860568]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea6" type="Area2D" parent="." unique_id=436988499]
+position = Vector2(939, 41)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea6" unique_id=752392188]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea7" type="Area2D" parent="." unique_id=653288119]
+position = Vector2(1034, 41)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea7" unique_id=376247537]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea8" type="Area2D" parent="." unique_id=296497671]
+position = Vector2(430, 113)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea8" unique_id=620639933]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea9" type="Area2D" parent="." unique_id=1820947580]
+position = Vector2(531, 113)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea9" unique_id=1334733140]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea10" type="Area2D" parent="." unique_id=1346197227]
+position = Vector2(629, 108)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea10" unique_id=1967435689]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea11" type="Area2D" parent="." unique_id=676123916]
+position = Vector2(734, 113)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea11" unique_id=1835658531]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea12" type="Area2D" parent="." unique_id=1780120665]
+position = Vector2(839, 113)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea12" unique_id=218899230]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea13" type="Area2D" parent="." unique_id=91293493]
+position = Vector2(956, 113)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea13" unique_id=1213719328]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea14" type="Area2D" parent="." unique_id=1720828901]
+position = Vector2(1060, 113)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea14" unique_id=1979134109]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea15" type="Area2D" parent="." unique_id=296129333]
+position = Vector2(525, 189)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea15" unique_id=2126346599]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea16" type="Area2D" parent="." unique_id=795932779]
+position = Vector2(641, 188)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea16" unique_id=1418745809]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea17" type="Area2D" parent="." unique_id=852266016]
+position = Vector2(751, 188)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea17" unique_id=593110531]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea18" type="Area2D" parent="." unique_id=426133866]
+position = Vector2(859, 189)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea18" unique_id=1236870958]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea19" type="Area2D" parent="." unique_id=1290187698]
+position = Vector2(979, 192)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea19" unique_id=1387359351]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea20" type="Area2D" parent="." unique_id=205553086]
+position = Vector2(1090, 191)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea20" unique_id=1720606410]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea21" type="Area2D" parent="." unique_id=443363718]
+position = Vector2(523, 273)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea21" unique_id=637920520]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea22" type="Area2D" parent="." unique_id=894837889]
+position = Vector2(634, 273)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea22" unique_id=206397912]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea23" type="Area2D" parent="." unique_id=2123270951]
+position = Vector2(761, 282)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea23" unique_id=1225216035]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea24" type="Area2D" parent="." unique_id=1080598640]
+position = Vector2(888, 283)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea24" unique_id=255325597]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea25" type="Area2D" parent="." unique_id=1453292706]
+position = Vector2(1002, 280)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea25" unique_id=1842953039]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea26" type="Area2D" parent="." unique_id=1241466091]
+position = Vector2(519, 384)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea26" unique_id=725827658]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea27" type="Area2D" parent="." unique_id=408795736]
+position = Vector2(645, 377)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea27" unique_id=730593367]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea28" type="Area2D" parent="." unique_id=358089256]
+position = Vector2(775, 383)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea28" unique_id=1275299668]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea29" type="Area2D" parent="." unique_id=1354660308]
+position = Vector2(910, 383)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea29" unique_id=2062718882]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea30" type="Area2D" parent="." unique_id=1723969]
+position = Vector2(1036, 386)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea30" unique_id=1328929132]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea31" type="Area2D" parent="." unique_id=681386580]
+position = Vector2(382, 493)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea31" unique_id=1413124712]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea32" type="Area2D" parent="." unique_id=1889156410]
+position = Vector2(509, 490)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea32" unique_id=1966552604]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea33" type="Area2D" parent="." unique_id=1187455261]
+position = Vector2(657, 494)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea33" unique_id=398426645]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea34" type="Area2D" parent="." unique_id=1826956513]
+position = Vector2(784, 491)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea34" unique_id=1343058312]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea35" type="Area2D" parent="." unique_id=436415146]
+position = Vector2(784, 491)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea35" unique_id=1703075639]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea36" type="Area2D" parent="." unique_id=1583260223]
+position = Vector2(933, 495)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea36" unique_id=1926397579]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea37" type="Area2D" parent="." unique_id=511026531]
+position = Vector2(1068, 498)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea37" unique_id=30415647]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea38" type="Area2D" parent="." unique_id=1989843931]
+position = Vector2(220, 608)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea38" unique_id=1802699868]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea39" type="Area2D" parent="." unique_id=1363533651]
+position = Vector2(356, 611)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea39" unique_id=1664118926]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea40" type="Area2D" parent="." unique_id=18675592]
+position = Vector2(514, 610)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea40" unique_id=309173871]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea41" type="Area2D" parent="." unique_id=787994571]
+position = Vector2(663, 613)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea41" unique_id=518394168]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea42" type="Area2D" parent="." unique_id=1247221128]
+position = Vector2(814, 614)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea42" unique_id=1299406711]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea43" type="Area2D" parent="." unique_id=1890268798]
+position = Vector2(968, 617)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea43" unique_id=2027285130]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="PlacementArea44" type="Area2D" parent="." unique_id=1689422859]
+position = Vector2(1095, 614)
+script = ExtResource("4_y3agc")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea44" unique_id=2129890853]
+position = Vector2(-3.5, -5.5)
+shape = SubResource("RectangleShape2D_olrfe")
+
+[node name="Path2D3" type="Path2D" parent="." unique_id=1554623032]
+curve = SubResource("Curve2D_y3agc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=255836736]
+
+[node name="BattleUI" parent="CanvasLayer" unique_id=168384880 instance=ExtResource("5_olrfe")]
+
+[node name="MapTimer" type="Timer" parent="." unique_id=40018101]
+wait_time = 3.0

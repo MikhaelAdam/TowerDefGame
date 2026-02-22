@@ -1,9 +1,0 @@
-[gd_resource type="StyleBoxTexture" format=3 uid="uid://mso1jpewhxk7"]
-
-[ext_resource type="Texture2D" uid="uid://bm7b5cnkbyrpb" path="res://assets/StoryUI/Textbox.png" id="1_sq201"]
-
-[resource]
-content_margin_left = 240.0
-content_margin_top = 30.0
-content_margin_right = 220.0
-texture = ExtResource("1_sq201")

@@ -1,0 +1,72 @@
+[background arg="res://assets/story/Places/Class normal.png" fade="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: That was… surprisingly easy?
+leave Lisa [animation="Instant In" length="0.0"]
+caster: Stage completed.
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Wah!? That scared me…
+leave Lisa [animation="Instant In" length="0.0"]
+caster: Cube acquired.
+[background arg="res://assets/story/transition/transition_1.jpg" fade="0.2" wait="true"]
+[background arg="res://assets/story/Places/Class normal.png" fade="0.2" wait="true"]
+[background arg="res://assets/story/transition/transition_1.jpg" fade="0.2" wait="true"]
+[background arg="res://assets/story/Places/Class normal.png" fade="0.2" wait="true"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Huh, it disappeared.
+Lisa: Wait no, I need to get out of here!
+leave Lisa [animation="Instant In" length="0.0"]
+[clear time="1.0" music="false" background="false" positions="false" style="false"]
+audio "res://assets/sfx/walking.mp3"
+[background arg="res://assets/story/Places/Hallway.png" fade="4.0" wait="true"]
+join Steve left [animation="Instant In" length="0.0"]
+UCP1: Hm!? Freeze!
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Whoa! Wait!
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+UCP1: Identify yourself!
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: I-i’m Lisa, i-i’m human! lower the gun please-
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+UCP1: Human? What are you talking about?
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: L-look i don’t know what’s going on
+Lisa: I just woke up here and-
+leave Lisa [animation="Instant In" length="0.0"]
+caster: Players have entered the stage
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Again!?
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+UCP1: What again?
+leave Steve [animation="Instant In" length="0.0"]
+caster: Beginning the game in 3…
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Look mister, i don’t understand it either,
+Lisa: but we need to protect some sort of glowing cube
+leave Lisa [animation="Instant In" length="0.0"]
+caster: Game started.
+join Steve left [animation="Instant In" length="0.0"]
+UCP1: Game?
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Believe me in this one!
+leave Lisa [animation="Instant In" length="0.0"]
+"Strange Creature": RAHH!!
+join Steve left [animation="Instant In" length="0.0"]
+UCP1: *Surprised Grunt*
+UCP1: Seems like there’s no other option!
+leave Steve [animation="Instant In" length="0.0"]
+[clear time="1.0"]
+[background arg="res://assets/story/Places/Stage 2 - Hallway.png" fade="2.0" wait="true"]
+join Steve left [animation="Instant In" length="0.0"]
+UCP1: I’ll handle this lane, you handle the other!
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Got it!
+leave Lisa [animation="Instant In" length="0.0"]
+[signal arg="done"]

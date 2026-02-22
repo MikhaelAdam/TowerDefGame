@@ -7,14 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://eea25e46omjh" path="res://assets/image/police/head.png" id="5_4j6w0"]
 [ext_resource type="Texture2D" uid="uid://b1vrkdwov6qi7" path="res://assets/image/police/hair.png" id="6_bsb25"]
 [ext_resource type="Texture2D" uid="uid://dlyvko0bxyotd" path="res://assets/image/police/thigh.png" id="7_31ty6"]
-[ext_resource type="Texture2D" uid="uid://c7r1awm8w0wp3" path="res://assets/image/mc/leg2.png" id="8_eskjm"]
 [ext_resource type="Texture2D" uid="uid://cyvb7fk10k7j" path="res://assets/image/police/feet.png" id="9_hvyga"]
 [ext_resource type="Texture2D" uid="uid://bxlj0xe27wepc" path="res://assets/image/police/leg.png" id="10_8eps4"]
 [ext_resource type="Texture2D" uid="uid://b24ps0exb1iwk" path="res://assets/image/police/torso.png" id="11_rpfsd"]
 [ext_resource type="Texture2D" uid="uid://cyq27a3o5ra10" path="res://assets/image/police/shoulder.png" id="12_p0q60"]
 [ext_resource type="Texture2D" uid="uid://cx7kau2dvmvyg" path="res://assets/image/police/forearm.png" id="13_8474e"]
 [ext_resource type="Texture2D" uid="uid://coerge0pwtkqg" path="res://assets/image/police/hand.png" id="14_4j6w0"]
-[ext_resource type="Texture2D" uid="uid://cm7xiiyt21o2j" path="res://assets/image/mc/pistol.png" id="14_m0byq"]
+[ext_resource type="Texture2D" uid="uid://b5xe7wvqvmwxq" path="res://assets/image/police/pistol.png" id="14_m0byq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1hl2"]
 size = Vector2(443, 282)
@@ -592,13 +591,13 @@ offset = Vector2(0, 131)
 
 [node name="Leg2" type="Sprite2D" parent="Police/CanvasGroup/RightLeg" unique_id=74401286]
 position = Vector2(4.314987, 243.00005)
-rotation = -0.30368727
-texture = ExtResource("8_eskjm")
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("10_8eps4")
 offset = Vector2(9, 134)
 
 [node name="RightFeet" type="Sprite2D" parent="Police/CanvasGroup/RightLeg/Leg2" unique_id=675173755]
-position = Vector2(10, 260)
-rotation = 1.3700835
+position = Vector2(10.000015, 260)
+rotation = 0.96865773
 texture = ExtResource("9_hvyga")
 offset = Vector2(-12, 36)
 flip_h = true
@@ -614,20 +613,20 @@ remote_path = NodePath("../Leg2")
 
 [node name="LeftLeg" type="Sprite2D" parent="Police/CanvasGroup" unique_id=1318079018]
 position = Vector2(57.064987, 0)
-rotation = -0.005235988
+rotation = -0.0052359886
 scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("7_31ty6")
 offset = Vector2(0, 131)
 
 [node name="Leg2" type="Sprite2D" parent="Police/CanvasGroup/LeftLeg" unique_id=1779590623]
 position = Vector2(5.935005, 243.00006)
-rotation = -0.20245817
 texture = ExtResource("10_8eps4")
 offset = Vector2(9, 134)
 
 [node name="LeftFeet" type="Sprite2D" parent="Police/CanvasGroup/LeftLeg/Leg2" unique_id=169287367]
 position = Vector2(10, 260)
-rotation = 1.5603243
+rotation = 0.8517207
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("9_hvyga")
 offset = Vector2(-12, 36)
 flip_h = true
@@ -658,14 +657,14 @@ flip_h = true
 [node name="RightArm" type="Sprite2D" parent="Police/CanvasGroup/Torso/RightHand" unique_id=1317832609]
 z_index = -1
 position = Vector2(183.5646, 2.0108643)
-rotation = 2.534218
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("13_8474e")
 offset = Vector2(86.08676, 2.013008)
 flip_h = true
 
 [node name="Hands" type="Sprite2D" parent="Police/CanvasGroup/Torso/RightHand/RightArm" unique_id=341966228]
-position = Vector2(210.36047, -27.35839)
-rotation = -0.048772227
+position = Vector2(210.36052, -27.358337)
+rotation = -0.04877224
 texture = ExtResource("14_4j6w0")
 offset = Vector2(-4, 25)
 flip_v = true
@@ -695,12 +694,13 @@ flip_h = true
 
 [node name="LeftArm" type="Sprite2D" parent="Police/CanvasGroup/Torso/LeftHand" unique_id=1054727359]
 position = Vector2(192.33664, -2.5737915)
-rotation = 0.8813912
+scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("13_8474e")
 offset = Vector2(92, 5)
 
 [node name="Hands" type="Sprite2D" parent="Police/CanvasGroup/Torso/LeftHand/LeftArm" unique_id=1430285846]
-position = Vector2(187.78122, -6.182724)
+position = Vector2(187.78119, -6.1827087)
+scale = Vector2(0.9999999, 0.9999999)
 texture = ExtResource("14_4j6w0")
 offset = Vector2(15.457001, 22.553375)
 flip_h = true

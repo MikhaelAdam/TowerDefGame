@@ -10,8 +10,8 @@ class_name DialogicNode_NameLabel
 
 func _ready() -> void:
 	add_to_group('dialogic_name_label')
-	#if hide_when_empty:
-		#name_label_root.visible = false
+	if hide_when_empty:
+		name_label_root.visible = false
 	text = ""
 
 

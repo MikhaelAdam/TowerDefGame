@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://dwhprl71esbko"]
+
+[ext_resource type="Script" uid="uid://b8yse06fngcyh" path="res://scenes/UI/battle_ui.gd" id="1_a20gn"]
+[ext_resource type="Texture2D" uid="uid://d0r4okqy74aim" path="res://assets/Potrait/Frame 1.png" id="1_ea2wa"]
+[ext_resource type="Texture2D" uid="uid://c1x4k53swjfo5" path="res://assets/Potrait/Frame 2.png" id="2_40w83"]
+[ext_resource type="Texture2D" uid="uid://cbwoours0c2cc" path="res://assets/Potrait/Frame 3.png" id="3_aomqe"]
+[ext_resource type="Texture2D" uid="uid://i2h04jjcaeuc" path="res://assets/Potrait/Frame 4.png" id="4_a20gn"]
+
+[node name="BattleUI" type="Control" unique_id=168384880]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_a20gn")
+
+[node name="Label" type="Label" parent="." unique_id=1520214546]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Enemies Left :"
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1179640880]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -145.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_top = 38
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1192911588]
+layout_mode = 2
+theme_override_constants/margin_left = 350
+theme_override_constants/margin_right = 350
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer" unique_id=1002441243]
+layout_mode = 2
+alignment = 1
+
+[node name="Steve" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=1440922736]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Steve"
+icon = ExtResource("2_40w83")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Maria" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=864174927]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Marika"
+icon = ExtResource("3_aomqe")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Alice" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=884431049]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Alice"
+icon = ExtResource("4_a20gn")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Lisa" type="Button" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=613917870]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Lisa"
+icon = ExtResource("1_ea2wa")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[connection signal="pressed" from="MarginContainer/MarginContainer/HBoxContainer/Steve" to="." method="_on_steve_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/HBoxContainer/Maria" to="." method="_on_maria_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/HBoxContainer/Alice" to="." method="_on_alice_pressed"]
+[connection signal="pressed" from="MarginContainer/MarginContainer/HBoxContainer/Lisa" to="." method="_on_lisa_pressed"]

@@ -15,98 +15,51 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="BrGJ2026"
-run/main_scene="uid://dqb83i6x4q4tf"
+run/main_scene="uid://bc3lw11646b6b"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-<<<<<<< Updated upstream
 Singleton="*uid://c3jk2ag75sjbi"
-=======
 Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
 directories/dch_directory={
-"Band Girl": "res://assets/character/Bandgirl/Band Girl.dch",
-"Entity": "res://assets/character/Entity/Entity.dch",
-"MainCharacter": "res://assets/character/MainCharacter/MainCharacter.dch",
-"Policeman/Police": "res://assets/character/Policeman/Police.dch",
+"Ami": "res://assets/character/Ami/Ami.dch",
+"Lisa": "res://assets/character/Lisa/Lisa.dch",
+"Marika": "res://assets/character/Marika/Marika.dch",
+"Placeholder": "res://assets/character/Auxilary/Placeholder.dch",
+"Sigma": "res://assets/character/Boss/Sigma.dch",
+"Steve": "res://assets/character/Steve/Steve.dch",
 "Strange Creature": "res://assets/character/Auxilary/Strange Creature.dch",
+"UCP1": "res://assets/character/Auxilary/UCP1.dch",
 "UCP2": "res://assets/character/Auxilary/UCP2.dch",
 "caster": "res://assets/character/Auxilary/caster.dch",
-"placehodler": "res://assets/character/Auxilary/placehodler.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch",
 "unknowCharacterPlaceholder": "res://assets/character/Auxilary/unknowCharacterPlaceholder.dch"
 }
 directories/dtl_directory={
-"briefing1": "res://timeline/briefing1.dtl",
-"briefing2": "res://timeline/briefing2.dtl",
-"briefing3": "res://timeline/briefing3.dtl",
-"briefing4": "res://timeline/briefing4.dtl",
-"briefing5": "res://timeline/briefing5.dtl",
 "ending": "res://timeline/ending.dtl",
-"intro": "res://timeline/intro.dtl",
-"intro2": "res://assets/character/MainCharacter/intro2.dtl",
-"intro3": "res://timeline/intro3.dtl",
-"intro4": "res://timeline/intro4.dtl",
-"intro5": "res://timeline/intro5.dtl",
-"test": "res://timeline/test.dtl",
-"timeline/intro2": "res://timeline/intro2.dtl"
+"scene1": "res://Tests/scene1.dtl",
+"scene2": "res://timeline/scene2.dtl",
+"scene3": "res://timeline/scene3.dtl",
+"scene4": "res://timeline/scene4.dtl",
+"scene5": "res://timeline/scene5.dtl",
+"timeline/scene1": "res://timeline/scene1.dtl",
+"timelinetesaead": "res://Tests/timelinetesaead.dtl"
 }
 layout/style_directory={
-"duplicateStyle": "res://addons/style/duplicateStyle.tres"
+"": "res://assets/style/final/New_File.tres",
+"New_File": "res://assets/style/final/New_File.tres"
 }
-layout/style_list=["res://addons/style/duplicateStyle.tres"]
-layout/default_style=""
-glossary/default_case_sensitive=true
-extensions_folder="res://addons/dialogic_additions"
-text/letter_speed=0.05
-text/initial_text_reveal_skippable=true
-text/text_reveal_skip_delay=0.1
-text/advance_delay=0.1
-text/autoadvance_per_character_delay=0
-text/autoadvance_ignored_characters_enabled=true
-animations/join_default_length=0.5
-animations/join_default_wait=true
-animations/leave_default_length=0.5
-animations/leave_default_wait=true
-animations/cross_fade_default_length=0.5
-choices/autofocus_first=true
-choices/delay=0.2
-choices/reveal_delay=0
-choices/reveal_by_input=false
-save/autosave_delay=60.0
-save/encryption_on_exports_only=true
-text/autopauses={}
-audio/channel_defaults={
-"": {
-"audio_bus": "",
-"fade_length": 0.0,
-"loop": false,
-"volume": 0.0
-},
-"music": {
-"audio_bus": "",
-"fade_length": 0.0,
-"loop": true,
-"volume": 0.0
-}
-}
-variables={}
-text/autoskip_time_per_event=0.0
-text/input_action="dialogic_default_action"
-text/autocolor_names=true
-history/simple_history_enabled=false
-history/full_history_enabled=false
-history/visited_event_history_enabled=false
-text/autoadvance_fixed_delay=0.5
-text/autoadvance_per_word_delay=0.4
->>>>>>> Stashed changes
+layout/style_list=["res://assets/style/final/New_File.tres"]
+layout/default_style="res://assets/style/final/New_File.tres"
 
 [display]
 
+window/size/mode=3
 window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="canvas_items"
@@ -152,4 +105,3 @@ dialogic_default_action={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)

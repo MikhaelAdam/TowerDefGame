@@ -1,0 +1,304 @@
+[background arg="res://assets/story/Places/Stage_4.png" fade="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: That was quite fun, wasn't it?
+leave Ami [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: I can’t believe I'm saying this, but yeah.
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: But performing consecutively like this is quite tiring
+leave Marika [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Then let’s take a rest.
+Steve: The next room seem to be… “normal”
+leave Steve [animation="Instant In" length="0.0"]
+audio "res://assets/sfx/walking.mp3"
+[background arg="res://assets/story/Places/Restroom.png" fade="4.0" wait="true"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Whoa, there’s even beds here!
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: This is nice…
+leave Marika [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: A respite is always welcome.
+leave Ami [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: I’ll take a look up ahead, you girls take a rest.
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Don’t be so uptight, Steve.
+Lisa: Come on, take a rest too will ya?
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Thanks, but as an officer, I have a duty to keep you safe.
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Whoa, you did not just say that.
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: holding laughter That sounds a bit corny-
+leave Marika [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: I assume this is what people say “trying to sound cool”?
+leave Ami [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Ng- j-just take a rest. I’ll be back.
+audio "res://assets/sfx/walking.mp3"
+leave Steve [animation="Fade Out" length="4.0" wait="true"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: What’s with him?
+leave Lisa [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: He must be shy being around girls
+leave Ami [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Don’t be like that, he’s just being polite.
+leave Marika [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Hey, Marika, are you like- in a band or something?
+Lisa: I mean, with that… instrument you’re carrying-
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: It’s a keytar, and yes, I am in a band.
+leave Marika [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Really? That’s so cool…
+Lisa: What’s the name? I’ll hear it once we find our way back.
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Well um- we never really thought about making it official.
+Marika: We just meet up and play together once in a while.
+Marika: How about you? What’s with those brass knuckles?
+leave Marika [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Ah? Um- ahaha- this is…
+Lisa: Uhh- i’m a bit of a… troublemaker, and um-
+Lisa: A-anyways! How about you Ami?
+leave Lisa [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: Hm? Me?
+leave Ami [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Yeah, I didn't see you move but the creatures started falling one by one.
+leave Lisa [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: Oh!
+Ami: Fufu, let’s just say I have my own trick.
+Ami: “A magician never reveal their own secrets” I believe?
+leave Ami [animation="Instant In" length="0.0"]
+audio "res://assets/sfx/walking.mp3"
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Ah, welcome back
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: You might want to see this.
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Hm?
+leave Lisa [animation="Instant In" length="0.0"]
+audio "res://assets/sfx/walking.mp3"
+[background arg="res://assets/story/Places/morgue.png" fade="4.0" wait="true"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: …
+leave Ami [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: What is this-
+leave Marika [animation="Instant In" length="0.0"]
+audio "res://assets/sfx/cloth_pulling.mp3"
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: What the heck…
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: I-is that-
+Marika: Our body?
+leave Marika [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Placeholder: Kgh!
+Lisa: I-i remember- i-i-
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: I died…
+leave Marika [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Ngh…
+leave Steve [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: …
+leave Ami [animation="Instant In" length="0.0"]
+[background arg="res://assets/story/Places/morgue2.png" fade="2.0" wait="true"]
+[background arg="res://assets/story/Places/morgue.png" fade="2.0" wait="true"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: B-but- how- where- where are we then?
+leave Lisa [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: …Purgatory.
+leave Ami [animation="Instant In" length="0.0"]
+[background arg="res://assets/story/Places/mrogue3.png" fade="2.0" wait="true"]
+[background arg="res://assets/story/Places/morgue.png" fade="2.0" wait="true"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Points gun towards Ami What are you?
+Steve: Your body is nowhere to be found.
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: !?
+Lisa: Y-you’re right, Ami’s is the only one-
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Ami…?
+leave Marika [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: …
+Ami: I’m sorry for not telling you, but-
+leave Ami [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Not a single step.
+leave Steve [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: …
+Ami: I just want all of us to have fun, before your soul moves on.
+leave Ami [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: What are you saying?
+leave Steve [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Ami, I don't understand…
+leave Marika [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: I’m the creator of this place.
+leave Ami [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Wh-what?
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Then why put us here?
+leave Steve [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: As you remembered, all of you are in critical condition.
+Ami: Your lives are fading. About to move on.
+Ami: I like learning about you humans.
+Ami: I like observing your lives, glory, achievements, no matter how small or big it is.
+Ami: I loved humanity, always.
+Ami: Be it their good or evil.
+Ami: So, I thought, as you’re dying anyways, it would be fun to interact with you.
+Ami: A piece of humanity. Small, but the same humanity I loved.
+leave Ami [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: S-so the stages-
+leave Lisa [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: I made it referencing your kind’s architecture.
+leave Ami [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Why did you made us forget?
+leave Steve [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: …
+Ami: I thought you won’t be able to have fun, thinking about the fact that you have died.
+leave Ami [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Ami…
+leave Marika [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: I made one last stage, but if you want to leave then i won’t hold you back.
+Ami: That door will lead to the exit from this place.
+Ami: I’ll take my leave now.
+leave Ami [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Wait- Ami!
+leave Marika [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: …
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: …
+leave Steve [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Nh…
+leave Marika [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: What do y’all think? Is she telling the truth?
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: The creatures don't really attack us through the stages.
+Steve: She doesn’t have the intention hurt us, but-
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: We can’t really make sure if she’s just pretending.
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: …
+Marika: I believe her.
+leave Marika [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Marika?
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: …
+leave Steve [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Before meeting you, she found me and we fought along together.
+Marika: I can feel it. She’s genuine in what she says.
+Marika: She is… my friend.
+leave Marika [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: …
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: …
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Well, if Marika believes her, then I believe her too.
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Lisa…
+leave Marika [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: What do you say, Mister cool guy?
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: sigh I don’t see why not.
+leave Steve [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Alright then, it’s decided! Let’s move!
+leave Lisa [animation="Instant In" length="0.0"]
+[clear time="1.0"]
+[background arg="res://assets/story/Places/Stage 5 - Final.png" fade="2.0" wait="true"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: All of you…
+leave Ami [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Ami. I want to perform.
+Marika: So show me the grand stage!
+leave Marika [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Alright! I’m ready to throw hands!
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: Lead the way.
+leave Steve [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: …
+Ami: Fufu.
+Ami: Very well then.
+Ami: “Let’s make this a moment to remember.”
+Ami: Ah, I always wanted to say that.
+leave Ami [animation="Instant In" length="0.0"]
+caster: Players have entered the stage.
+caster: Beginning boss battle.
+join Sigma left [animation="Instant In" length="0.0"]
+Sigma: *rizzing sound*
+leave Sigma [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: U-uh- s-seriously?
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: *try to hold a smirk* Nhn…
+leave Marika [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: I am not even going to question it.
+leave Steve [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: Let’s begin.
+leave Ami [animation="Instant In" length="0.0"]
+[signal arg="done"]
