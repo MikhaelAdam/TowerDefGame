@@ -19,6 +19,10 @@ run/main_scene="uid://dqb83i6x4q4tf"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Singleton="*uid://c3jk2ag75sjbi"
+
 [display]
 
 window/size/window_width_override=1920
@@ -50,3 +54,4 @@ defender=""
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

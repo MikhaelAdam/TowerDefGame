@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://im37b05iofnv"]
+
+[ext_resource type="Script" uid="uid://cwsy04dxgw0eg" path="res://scripts/stage.gd" id="1_q3nyc"]
+[ext_resource type="Texture2D" uid="uid://bh5whv0ldox8i" path="res://assets/image/Map_Stage/hallway.png" id="2_r8xlp"]
+[ext_resource type="Script" uid="uid://c3xo1jdn6ecwp" path="res://scripts/placementarea.gd" id="3_2qgk1"]
+[ext_resource type="PackedScene" uid="uid://88g8ccg12gvn" path="res://scenes/harvester/harvester.tscn" id="4_r8xlp"]
+
+[sub_resource type="Curve2D" id="Curve2D_oj437"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -52, 371, 0, 0, 0, 0, 1030, 371)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_xrlj8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -56, 176, 0, 0, 0, 0, 975, 179)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrlj8"]
+size = Vector2(108, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q3nyc"]
+size = Vector2(120, 104)
+
+[node name="Stage1" type="Node2D" unique_id=631107254 node_paths=PackedStringArray("paths", "harvester")]
+script = ExtResource("1_q3nyc")
+paths = [NodePath("Path2D"), NodePath("Path2D2")]
+harvester = [NodePath("Harvester"), NodePath("Harvester/Harvester")]
+metadata/_custom_type_script = "uid://cwsy04dxgw0eg"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1925303845]
+z_index = -4
+position = Vector2(577.6667, 326)
+scale = Vector2(0.3009259, 0.3009259)
+texture = ExtResource("2_r8xlp")
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1304571473]
+curve = SubResource("Curve2D_oj437")
+
+[node name="Path2D2" type="Path2D" parent="." unique_id=2067551948]
+curve = SubResource("Curve2D_xrlj8")
+
+[node name="PlacementArea" type="Area2D" parent="." unique_id=454112204]
+position = Vector2(527, 182)
+monitoring = false
+monitorable = false
+script = ExtResource("3_2qgk1")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea" unique_id=650049541]
+position = Vector2(-3, 1)
+shape = SubResource("RectangleShape2D_xrlj8")
+
+[node name="PlacementArea2" type="Area2D" parent="." unique_id=385778901]
+position = Vector2(517, 372)
+script = ExtResource("3_2qgk1")
+metadata/_custom_type_script = "uid://c3xo1jdn6ecwp"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlacementArea2" unique_id=1664587413]
+shape = SubResource("RectangleShape2D_q3nyc")
+
+[node name="Harvester" parent="." unique_id=29287158 instance=ExtResource("4_r8xlp")]
+position = Vector2(978, 179)
+
+[node name="Harvester" parent="Harvester" unique_id=1840511242 instance=ExtResource("4_r8xlp")]
+position = Vector2(50, 195)
