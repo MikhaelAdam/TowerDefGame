@@ -1,0 +1,70 @@
+[background arg="res://assets/story/Places/Hallway.png" fade="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: That’s taken care of.
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: How does that keytar even work?
+leave Steve [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: I don’t know either
+leave Marika [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: This place works in a strange way after all.
+leave Ami [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Y’all? You might want to take a look at this.
+leave Lisa [animation="Instant In" length="0.0"]
+audio "res://assets/sfx/walking.mp3"
+[background arg="res://assets/story/Places/Stage_4.png" fade="4.0" wait="true"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: This is…
+leave Steve [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: My head hurts seeing that.
+leave Marika [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: Aw, really? I thought it looks pretty
+leave Ami [animation="Instant In" length="0.0"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Pretty?
+leave Lisa [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: There’s that glowing cube again, over there
+leave Steve [animation="Instant In" length="0.0"]
+[background arg="res://assets/story/Places/Cube.png" fade="4.0" wait="true"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: Looks like we have our next destination
+leave Ami [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Let’s get moving.
+leave Marika [animation="Instant In" length="0.0"]
+audio "res://assets/sfx/walking.mp3"
+[background arg="res://assets/story/Places/Stage_4.png" fade="2.0" wait="true"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: …
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: …
+leave Marika [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: …
+leave Steve [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: Hm? Why is everyone staying silent?
+leave Ami [animation="Instant In" length="0.0"]
+caster: Players have entered the stage-
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Sheesh…
+leave Lisa [animation="Instant In" length="0.0"]
+join Marika left [animation="Instant In" length="0.0"]
+Marika: Nh…
+leave Marika [animation="Instant In" length="0.0"]
+join Steve left [animation="Instant In" length="0.0"]
+Steve: *Sigh*
+leave Steve [animation="Instant In" length="0.0"]
+join Ami left [animation="Instant In" length="0.0"]
+Ami: Ah, so you were waiting for the announcer.
+leave Ami [animation="Instant In" length="0.0"]
+[clear time="1.0"]
+[background arg="res://assets/story/Places/Stage 4 - Void B.png" fade="2.0" wait="true"]
+[signal arg="done"]

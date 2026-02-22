@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://em2uwujhy4xa"]
+
+[ext_resource type="Script" uid="uid://c68wmlmslvfm4" path="res://scenes/stage/stage_1.story.gd" id="1_acamm"]
+
+[node name="Stage1_story" type="Node2D" unique_id=1825253832]
+script = ExtResource("1_acamm")

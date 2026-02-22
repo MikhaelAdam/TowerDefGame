@@ -1,0 +1,51 @@
+[background arg="res://assets/story/transition/transition_1.jpg" fade="1.0" wait="true"]
+[wait time="1.0" skippable="true"]
+[background arg="res://assets/story/intro/1.png" fade="0.5" wait="true"]
+[wait time="2.0" skippable="true"]
+[background arg="res://assets/story/transition/transition_1.jpg" fade="0.5" wait="true"]
+[background arg="res://assets/story/intro/2.png" fade="0.5" transition="Simple Fade" wait="true"]
+[wait time="2.0" skippable="true"]
+[background arg="res://assets/story/transition/transition_2.png" fade="1.0" transition="Simple Fade" wait="true"]
+[wait time="1.0"]
+[background arg="res://assets/story/Places/Class normal.png" fade="3.0" wait="true"]
+Placeholder: Ugh... feels like i just chugged 10 coffees in one minute.
+join Lisa left [animation="Fade In" length="2.0" wait="true"]
+Lisa: Where in the world am i?
+Lisa: A classroom?
+[clear time="1.0" step="false" music="false" background="false" positions="false" style="false"]
+[background arg="res://assets/story/Places/Class left.png" fade="2.0" wait="true"]
+[background arg="res://assets/story/Places/Class right.png" fade="2.0" wait="true"]
+[background arg="res://assets/story/Places/Class normal.png" fade="2.0" wait="true"]
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: what the-
+Lisa: Is that a void?
+leave Lisa [animation="Instant In" length="0.0"]
+caster: Player has entered the stage
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Who’s there!?
+leave Lisa [animation="Instant In" length="0.0"]
+caster: Beginning the game in 3…
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: What’s going on!?
+leave Lisa [animation="Instant In" length="0.0"]
+Lisa: 2…
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: Is that a glowing cube???
+leave Lisa [animation="Instant In" length="0.0"]
+[background arg="res://assets/story/transition/transition_2.png" fade="0.0"]
+caster: 1…
+caster: Game started.
+caster: Do not let the creatures touch the cube.
+caster: Good luck.
+audio "res://assets/sfx/fall.mp3"
+[background arg="res://assets/story/Places/Class normal.png" fade="0.0"]
+"Strange Creature": RAHHH!
+join Lisa left [animation="Instant In" length="0.0"]
+Lisa: What the hell!?
+[clear time="1.0"]
+[background arg="res://assets/story/Places/Stage 1 - Classroom.png" fade="2.0" wait="true"]
+join Lisa left [animation="Fade In"]
+Lisa: Seems like the creature doesn’t attack me…
+Lisa: Rather, it doesn’t seem to care at all.
+Lisa: I just need to beat them up right?
+[signal arg="done"]
